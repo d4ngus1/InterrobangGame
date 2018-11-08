@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 443ebed5c1dbe914b99d40e5bc7194ea
+timeCreated: 1541172763
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: melee_0
+    21300002: melee_1
+    21300004: melee_2
+    21300006: melee_3
+    21300008: melee_4
+    21300010: melee_5
+    21300012: melee_6
+    21300014: melee_7
+    21300016: melee_8
+    21300018: melee_9
+    21300020: melee_10
+    21300022: melee_11
+    21300024: melee_12
+    21300026: melee_13
+    21300028: melee_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: melee_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 79
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 87
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_2
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 0
+        width: 101
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_3
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 0
+        width: 92
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_4
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 0
+        width: 93
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_5
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 92
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_6
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 0
+        width: 133
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_7
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 0
+        width: 163
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_8
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 185
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_9
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 0
+        width: 180
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_10
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 0
+        width: 130
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_11
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 0
+        width: 211
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_12
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 0
+        width: 196
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_13
+      rect:
+        serializedVersion: 2
+        x: 2947
+        y: 0
+        width: 173
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: melee_14
+      rect:
+        serializedVersion: 2
+        x: 3188
+        y: 0
+        width: 133
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

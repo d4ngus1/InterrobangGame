@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: f1ec28080c1131f459b253250a79a712
+timeCreated: 1541175534
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: meleeL_0
+    21300002: meleeL_1
+    21300004: meleeL_2
+    21300006: meleeL_3
+    21300008: meleeL_4
+    21300010: meleeL_5
+    21300012: meleeL_6
+    21300014: meleeL_7
+    21300016: meleeL_8
+    21300018: meleeL_9
+    21300020: meleeL_10
+    21300022: meleeL_11
+    21300024: meleeL_12
+    21300026: meleeL_13
+    21300028: meleeL_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: meleeL_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 133
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 173
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_2
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 0
+        width: 196
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_3
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 0
+        width: 211
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_4
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 0
+        width: 130
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_5
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 0
+        width: 180
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_6
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 0
+        width: 185
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_7
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 163
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_8
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 0
+        width: 133
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_9
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 0
+        width: 92
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_10
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 0
+        width: 93
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_11
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 0
+        width: 92
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_12
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 0
+        width: 101
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_13
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 0
+        width: 87
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meleeL_14
+      rect:
+        serializedVersion: 2
+        x: 3257
+        y: 0
+        width: 79
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

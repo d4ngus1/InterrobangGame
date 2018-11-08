@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: a5bb24d33935bba41b1ac6e3e527528f
+timeCreated: 1538595497
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Zombie Spritesheet_0
+    21300002: Zombie Spritesheet_1
+    21300004: Zombie Spritesheet_2
+    21300006: Zombie Spritesheet_3
+    21300008: Zombie Spritesheet_4
+    21300010: Zombie Spritesheet_5
+    21300012: Zombie Spritesheet_6
+    21300014: Zombie Spritesheet_7
+    21300016: Zombie Spritesheet_8
+    21300018: Zombie Spritesheet_9
+    21300020: Zombie Spritesheet_10
+    21300022: Zombie Spritesheet_11
+    21300024: Zombie Spritesheet_12
+    21300026: Zombie Spritesheet_13
+    21300028: Zombie Spritesheet_14
+    21300030: Zombie Spritesheet_15
+    21300032: Zombie Spritesheet_16
+    21300034: Zombie Spritesheet_17
+    21300036: Zombie Spritesheet_18
+    21300038: Zombie Spritesheet_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zombie Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1109
+        width: 207
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1117
+        width: 210
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1115
+        width: 215
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1114
+        width: 219
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1114
+        width: 219
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1115
+        width: 215
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1117
+        width: 210
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1109
+        width: 207
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 681
+        width: 163
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 683
+        width: 200
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 687
+        width: 187
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 695
+        width: 180
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 696
+        width: 194
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 683
+        width: 194
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 190
+        width: 194
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 203
+        width: 194
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 202
+        width: 180
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 194
+        width: 187
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 190
+        width: 200
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 188
+        width: 163
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

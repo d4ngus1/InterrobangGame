@@ -1,0 +1,1043 @@
+fileFormatVersion: 2
+guid: 8c648538f315012419eda83a4dac8b1d
+timeCreated: 1538593664
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: i1
+    21300002: i2
+    21300004: i3
+    21300006: i4
+    21300008: i5
+    21300010: i6
+    21300012: i7
+    21300014: i8
+    21300016: i9
+    21300018: Ghost Spritesheet_9
+    21300020: Ghost Spritesheet_10
+    21300022: Ghost Spritesheet_11
+    21300024: Ghost Spritesheet_12
+    21300026: Ghost Spritesheet_13
+    21300028: Ghost Spritesheet_14
+    21300030: Ghost Spritesheet_15
+    21300032: Ghost Spritesheet_16
+    21300034: Ghost Spritesheet_17
+    21300036: Ghost Spritesheet_18
+    21300038: w1
+    21300040: w2
+    21300042: w3
+    21300044: w4
+    21300046: w5
+    21300048: w6
+    21300050: w7
+    21300052: Ghost Spritesheet_26
+    21300054: Ghost Spritesheet_27
+    21300056: Ghost Spritesheet_28
+    21300058: Ghost Spritesheet_29
+    21300060: Ghost Spritesheet_30
+    21300062: Ghost Spritesheet_31
+    21300064: Ghost Spritesheet_32
+    21300066: Ghost Spritesheet_33
+    21300068: Ghost Spritesheet_34
+    21300070: Ghost Spritesheet_35
+    21300072: Ghost Spritesheet_36
+    21300074: Ghost Spritesheet_37
+    21300076: i9l
+    21300078: i8l
+    21300080: i7l
+    21300082: i6l
+    21300084: i5l
+    21300086: i4l
+    21300088: i3l
+    21300090: i2l
+    21300092: i1l
+    21300094: Ghost Spritesheet_47
+    21300096: Ghost Spritesheet_48
+    21300098: Ghost Spritesheet_49
+    21300100: Ghost Spritesheet_50
+    21300102: wl7
+    21300104: wl6
+    21300106: wl5
+    21300108: wl4
+    21300110: wl3
+    21300112: wl2
+    21300114: wl1
+    21300116: Ghost Spritesheet_58
+    21300118: Ghost Spritesheet_59
+    21300120: Ghost Spritesheet_60
+    21300122: Ghost Spritesheet_61
+    21300124: Ghost Spritesheet_62
+    21300126: Ghost Spritesheet_63
+    21300128: Ghost Spritesheet_64
+    21300130: Ghost Spritesheet_65
+    21300132: Ghost Spritesheet_66
+    21300134: Ghost Spritesheet_67
+    21300136: Ghost Spritesheet_68
+    21300138: Ghost Spritesheet_69
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 1024
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: i1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 661
+        width: 67
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 661
+        width: 67
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 663
+        width: 64
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i4
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 663
+        width: 73
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 663
+        width: 75
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 665
+        width: 67
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 665
+        width: 67
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i8
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 663
+        width: 68
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 661
+        width: 70
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 721
+        width: 129
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 721
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 719
+        width: 71
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 663
+        width: 66
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 663
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 663
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 665
+        width: 71
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 542
+        width: 57
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 538
+        width: 81
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 538
+        width: 81
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 542
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w2
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 542
+        width: 94
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w3
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 542
+        width: 103
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w4
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 541
+        width: 100
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w5
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 527
+        width: 95
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 521
+        width: 100
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: w7
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 539
+        width: 100
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 416
+        width: 86
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 414
+        width: 90
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 416
+        width: 90
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 416
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 416
+        width: 69
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 416
+        width: 71
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 417
+        width: 69
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 417
+        width: 69
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 409
+        width: 143
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 334
+        width: 72
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 336
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 336
+        width: 128
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i9l
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 276
+        width: 70
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i8l
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 278
+        width: 68
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i7l
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 279
+        width: 67
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i6l
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 279
+        width: 67
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i5l
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 278
+        width: 75
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i4l
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 278
+        width: 73
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i3l
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 278
+        width: 64
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i2l
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 276
+        width: 67
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: i1l
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 276
+        width: 67
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 279
+        width: 71
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 278
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 278
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 278
+        width: 66
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 154
+        width: 100
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 135
+        width: 100
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl5
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 142
+        width: 95
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl4
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 156
+        width: 101
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 157
+        width: 103
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl2
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 157
+        width: 94
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wl1
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 157
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 153
+        width: 81
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 153
+        width: 81
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 157
+        width: 57
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 24
+        width: 143
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 32
+        width: 69
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 32
+        width: 69
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 31
+        width: 71
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 31
+        width: 69
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 31
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 31
+        width: 90
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 29
+        width: 90
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghost Spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 31
+        width: 86
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
