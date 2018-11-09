@@ -9,11 +9,15 @@ public class LeverRotation : MonoBehaviour
     bool ghostIsInside = false;
     bool isLeverOn = false;
     int clickCounter = 0;
-    [Range(0,1)]
-    public float maxRotation = 0;
-    float initialRotation;
+    
+    //rotation vars
     [Range (0,1)]
     public float rotationSpeed = 0.5f;
+    //the amount of rotation needed for the object 
+    public float maxRotation = 180;
+    float rotationPosition;
+    float initialRotation;
+    public bool rotateLeft = true;
 
     ParticleSystem particle;
     SwitchingCharacters characters;
@@ -29,7 +33,8 @@ public class LeverRotation : MonoBehaviour
         particle.enableEmission = false;
         highlight.SetActive(false);
 
-        initialRotation = rotationObject.transform.rotation.z;
+        //stores the initial rotation so it can be set back to it 
+        initialRotation = rotationObject.GetComponent<Transform>().eulerAngles.z;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,7 +71,7 @@ public class LeverRotation : MonoBehaviour
             {
                 ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
                 ghost.SetActive(false);
-                ElevatorUpdateOn();
+                RotationUpdateOn();
             }
             else
             {
@@ -77,11 +82,15 @@ public class LeverRotation : MonoBehaviour
 
         if (isLeverOn == false)
         {
-            ElevatorUpdateOff();
+            RotationUpdateOff();
         }
 
         //keeps the highlight behind the lever
         highlight.gameObject.transform.rotation = gameObject.transform.rotation;
+
+        //keeps track of the objects rotation
+        //stores the initial rotation of the object
+        rotationPosition = rotationObject.GetComponent<Transform>().eulerAngles.z;
     }
 
     private void OnMouseDown()
@@ -116,20 +125,34 @@ public class LeverRotation : MonoBehaviour
 
     }
 
-    private void ElevatorUpdateOn()
+    private void RotationUpdateOn()
     {
-        //moves the platform up 
-        if (rotationObject.transform.rotation.z > maxRotation)
+        //rotating the object to the left
+        if (rotationPosition > maxRotation && rotateLeft == true)
         {
             rotationObject.transform.Rotate(0, 0, -rotationSpeed);
         }
-    }
 
-    private void ElevatorUpdateOff()
-    {
-        if (rotationObject.transform.rotation.z != initialRotation)
+        //rotating the object to the right 
+        if (rotationPosition < maxRotation && rotateLeft == false)
         {
             rotationObject.transform.Rotate(0, 0, rotationSpeed);
+        }
+
+    }
+
+    private void RotationUpdateOff()
+    {
+        //rotating the object back to the right 
+        if (rotationPosition < initialRotation && rotateLeft == true)
+        {
+            rotationObject.transform.Rotate(0, 0, rotationSpeed);
+        }
+
+        //rotating the object back to the left
+        if (rotationPosition > initialRotation && rotateLeft == false)
+        {
+            rotationObject.transform.Rotate(0, 0, -rotationSpeed);
         }
     }
 }

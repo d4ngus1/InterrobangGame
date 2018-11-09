@@ -6,7 +6,7 @@ public class LeverElevator : MonoBehaviour
     GameObject ghost;
     public GameObject highlight;
     public GameObject elevatorObject;
-    [Range(0, 100)]
+    [Range(0, 10)]
     public float maxHeight = 0f;
     float initialHeight;
     [Range(0, 1)]
