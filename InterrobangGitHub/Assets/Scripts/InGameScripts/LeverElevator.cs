@@ -3,24 +3,34 @@ using System.Collections;
 
 public class LeverElevator : MonoBehaviour
 {
-    public GameObject ghost;
+    GameObject ghost;
+    Animator ghostAnim;
+    float animTimer;
+    public float turnGhostOff = 1;
     public GameObject highlight;
     public GameObject elevatorObject;
-    [Range(0, 100)]
+    [Range(0, 10)]
     public float maxHeight = 0f;
     float initialHeight;
     [Range(0, 1)]
     public float elevatorSpeed = 0.05f; 
     bool ghostIsInside = false;
     bool isLeverOn = false;
+    bool leverRotate = false;
     int clickCounter = 0;
-
+    bool runTimer = false;
+    bool elevatorUpdate = false;
+    Vector2 ghostPosWhenLeverOn;
 
     ParticleSystem particle;
     SwitchingCharacters characters;
 
     private void Start()
     {
+        //set up the ghost game object
+        ghost = GameObject.FindGameObjectWithTag("ghost");
+        ghostAnim = ghost.GetComponent<Animator>();
+
         //gets the particle system off of the lever and sets it to false
         particle = gameObject.GetComponent<ParticleSystem>();
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
@@ -63,9 +73,18 @@ public class LeverElevator : MonoBehaviour
             //when the leaver is on stop the ghost from being controlled as it is now possessing the switch 
             if (isLeverOn == true)
             {
-                ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
-                ghost.SetActive(false);
-                ElevatorUpdateOn();
+                ghost.transform.position = ghostPosWhenLeverOn;
+
+                if (animTimer > turnGhostOff)
+                {
+                    particle.enableEmission = true;
+                    ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
+                    ghost.SetActive(false);
+                    leverRotate = true;
+                    runTimer = false;
+                    elevatorUpdate = true;
+                    animTimer = 0;
+                }
             }
             else
             {
@@ -81,6 +100,22 @@ public class LeverElevator : MonoBehaviour
 
         //keeps the highlight behind the lever
         highlight.gameObject.transform.rotation = gameObject.transform.rotation;
+
+        if (leverRotate == true)
+        {
+            transform.Rotate(new Vector3(0, 0, 100));
+            leverRotate = false;
+        }
+
+        if (runTimer == true)
+        {
+            animTimer += 1 * Time.deltaTime;
+        }
+
+        if(elevatorUpdate == true)
+        {
+            ElevatorUpdateOn();
+        }
     }
 
     private void OnMouseDown()
@@ -96,17 +131,19 @@ public class LeverElevator : MonoBehaviour
             //if the lever is off then rotate it and start the emission 
             if (isLeverOn == false)
             {
-                transform.Rotate(new Vector3(0, 0, 100));
-
-                particle.enableEmission = true;
+                //start the possess animation
+                ghostAnim.SetBool("possess", true);
+                runTimer = true;
+                ghostPosWhenLeverOn = ghost.transform.position;
                 isLeverOn = true;
             }
 
             //if the lever is pressed again it is off so rotate back and turn the emission off 
             if (clickCounter == 2 && characters.counter == 2)
             {
+                ghostAnim.SetBool("possess", false);
                 transform.Rotate(new Vector3(0, 0, -100));
-
+                elevatorUpdate = false;
                 particle.enableEmission = false;
 
                 isLeverOn = false;

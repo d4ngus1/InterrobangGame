@@ -16,7 +16,7 @@ public class GhostMovement : MonoBehaviour
     public float movementSlowdown;
     private Vector3 mousePosition;
     private Rigidbody2D rb;
-    Vector2 direction;
+    public Vector2 direction;
     float move;
 
     private void Start()
@@ -46,7 +46,7 @@ public class GhostMovement : MonoBehaviour
 
             transform.eulerAngles = new Vector2(0, -360);
         }
-        else 
+        else
         {
             //stop the ghost from playing the wrong animation when switching 
             anim.SetFloat("gSpeed", 0f);

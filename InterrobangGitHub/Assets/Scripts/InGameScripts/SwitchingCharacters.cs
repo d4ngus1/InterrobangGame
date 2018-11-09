@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class SwitchingCharacters : MonoBehaviour
 {
-
+    GameObject stompButton, meleeButton;
     public Button characterSwitchButton;
-
     private ZombieMovement zombieMovement;
     private GhostMovement ghostMovement;
     private CameraFollowPlayer camera;
@@ -19,6 +18,8 @@ public class SwitchingCharacters : MonoBehaviour
         zombieMovement = GameObject.FindObjectOfType<ZombieMovement>();
         ghostMovement = GameObject.FindObjectOfType<GhostMovement>();
         camera = GameObject.FindObjectOfType<CameraFollowPlayer>();
+        stompButton = GameObject.FindGameObjectWithTag("stomp");
+        meleeButton = GameObject.FindGameObjectWithTag("melee");
     }
 
     private void Start()
@@ -46,12 +47,16 @@ public class SwitchingCharacters : MonoBehaviour
             zombieMovement.active = true;
             camera.zombieActivated = true;
             ghostMovement.active = false;
+            stompButton.GetComponent<Animator>().SetBool("zombieActive", true);
+            meleeButton.GetComponent<Animator>().SetBool("zombieActive", true);
         }
         if (counter == 2)
         {
             ghostMovement.active = true;
             camera.zombieActivated = false;
             zombieMovement.active = false;
+            stompButton.GetComponent<Animator>().SetBool("zombieActive", false);
+            meleeButton.GetComponent<Animator>().SetBool("zombieActive", false);
         }
         
     }
