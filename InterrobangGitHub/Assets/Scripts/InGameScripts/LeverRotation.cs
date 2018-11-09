@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LeverRotation : MonoBehaviour
 {
-    public GameObject ghost;
+    GameObject ghost;
     public GameObject highlight;
     public GameObject rotationObject;
     bool ghostIsInside = false;
@@ -20,6 +20,9 @@ public class LeverRotation : MonoBehaviour
 
     private void Start()
     {
+        //set up the ghost game object
+        ghost = GameObject.FindGameObjectWithTag("ghost");
+
         //gets the particle system off of the lever and sets it to false
         particle = gameObject.GetComponent<ParticleSystem>();
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
