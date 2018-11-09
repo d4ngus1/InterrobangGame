@@ -19,6 +19,15 @@ public class LeverRotation : MonoBehaviour
     float initialRotation;
     public bool rotateLeft = true;
 
+    //animation vars
+    bool runTimer = false;
+    bool rotationUpdate = false;
+    private Vector2 ghostPosWhenLeverOn;
+    float animTimer;
+    public float turnGhostOff = 1;
+    bool leverRotate = false;
+    Animator ghostAnim;
+
     ParticleSystem particle;
     SwitchingCharacters characters;
 
@@ -26,6 +35,7 @@ public class LeverRotation : MonoBehaviour
     {
         //set up the ghost game object
         ghost = GameObject.FindGameObjectWithTag("ghost");
+        ghostAnim = ghost.GetComponent<Animator>();
 
         //gets the particle system off of the lever and sets it to false
         particle = gameObject.GetComponent<ParticleSystem>();
@@ -69,9 +79,18 @@ public class LeverRotation : MonoBehaviour
             //when the leaver is on stop the ghost from being controlled as it is now possessing the switch 
             if (isLeverOn == true)
             {
-                ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
-                ghost.SetActive(false);
-                RotationUpdateOn();
+                ghost.transform.position = ghostPosWhenLeverOn;
+
+                if (animTimer > turnGhostOff)
+                {
+                    particle.enableEmission = true;
+                    ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
+                    ghost.SetActive(false);
+                    leverRotate = true;
+                    runTimer = false;
+                    rotationUpdate = true;
+                    animTimer = 0;
+                }
             }
             else
             {
@@ -83,6 +102,22 @@ public class LeverRotation : MonoBehaviour
         if (isLeverOn == false)
         {
             RotationUpdateOff();
+        }
+
+        if (leverRotate == true)
+        {
+            transform.Rotate(new Vector3(0, 0, 100));
+            leverRotate = false;
+        }
+
+        if (runTimer == true)
+        {
+            animTimer += 1 * Time.deltaTime;
+        }
+
+        if (rotationUpdate == true)
+        {
+            RotationUpdateOn();
         }
 
         //keeps the highlight behind the lever
@@ -106,8 +141,9 @@ public class LeverRotation : MonoBehaviour
             //if the lever is off then rotate it and start the emission 
             if (isLeverOn == false)
             {
-                transform.Rotate(new Vector3(0, 0, 100));
-
+                ghostPosWhenLeverOn = ghost.transform.position;
+                ghostAnim.SetBool("possess", true);
+                runTimer = true;
                 particle.enableEmission = true;
                 isLeverOn = true;
             }
@@ -115,10 +151,10 @@ public class LeverRotation : MonoBehaviour
             //if the lever is pressed again it is off so rotate back and turn the emission off 
             if (clickCounter == 2 && characters.counter == 2)
             {
+                ghostAnim.SetBool("possess", false);
                 transform.Rotate(new Vector3(0, 0, -100));
-
                 particle.enableEmission = false;
-
+                rotationUpdate = false;
                 isLeverOn = false;
             }
         }
