@@ -102,7 +102,7 @@ public class ZombieMovement : MonoBehaviour
     void movementLeftRightUpdate()
     {
         //sets where the screen is touched to the zombie movement 
-        if (Input.mousePosition.x < 1800)
+        if (Input.mousePosition.x < 1710 || Input.mousePosition.y > 290)
         {
             if (Input.GetMouseButton(0))
             {
