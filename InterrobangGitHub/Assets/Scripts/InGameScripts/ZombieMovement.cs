@@ -20,6 +20,7 @@ public class ZombieMovement : MonoBehaviour
     private Vector2 direction;
     [Range(1f, 10f)]
     public float moveSpeed = 5f;
+    Vector2 finalMovement;
 
     //zombie stomp ability vars
     public float stompCounter = 0;
@@ -75,7 +76,7 @@ public class ZombieMovement : MonoBehaviour
             {
                 anim.SetLayerWeight(1, 1);
                 anim.speed = Mathf.Abs(direction.y * moveSpeed);
-                transform.position = new Vector2(transform.position.x, transform.position.y + direction.y * moveSpeed * Time.deltaTime);
+                transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y + direction.y * moveSpeed * Time.deltaTime);
                 rb.gravityScale = 0;
             }
             else
@@ -108,12 +109,18 @@ public class ZombieMovement : MonoBehaviour
             {
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 direction = (mousePos - transform.position).normalized;
-                transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y);
             }
             else direction = Vector2.zero;
 
             //passes the zombie movement to the animator to play the right animation 
             anim.SetFloat("speed", direction.x);
+        }
+        //set the velocity of the rigid body to the direction of the mouse
+        finalMovement.x = direction.x * moveSpeed;
+        finalMovement.y = rb.velocity.y;
+        if (onLadder == false)
+        {
+            rb.velocity = finalMovement;
         }
     }
 
