@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 3e4210567c8394c669befa16c69dc373
+timeCreated: 1543844029
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: zombie walk_0
+    21300002: zombie walk_1
+    21300004: zombie walk_2
+    21300006: zombie walk_3
+    21300008: zombie walk_4
+    21300010: zombie walk_5
+    21300012: zombie walk_6
+    21300014: zombie walk_7
+    21300016: zombie walk_8
+    21300018: zombie walk_9
+    21300020: zombie walk_10
+    21300022: zombie walk_11
+    21300024: zombie walk_12
+    21300026: zombie walk_13
+    21300028: zombie walk_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zombie walk_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3488
+        width: 459
+        height: 781
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_1
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 3486
+        width: 450
+        height: 783
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_2
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 3483
+        width: 437
+        height: 786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2618
+        width: 414
+        height: 785
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_4
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 2620
+        width: 405
+        height: 781
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_5
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 2622
+        width: 398
+        height: 777
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_6
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1760
+        width: 391
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_7
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1758
+        width: 389
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_8
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1758
+        width: 390
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 893
+        width: 397
+        height: 772
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_10
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 893
+        width: 406
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_11
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 892
+        width: 427
+        height: 777
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 26
+        width: 442
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_13
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 26
+        width: 454
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zombie walk_14
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 31
+        width: 459
+        height: 777
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
