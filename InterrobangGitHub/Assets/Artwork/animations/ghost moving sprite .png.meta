@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 163a5d04f2b864699ac8e8b4c9553192
+timeCreated: 1543498474
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ghost moving sprite _0
+    21300002: ghost moving sprite _1
+    21300004: ghost moving sprite _2
+    21300006: ghost moving sprite _3
+    21300008: ghost moving sprite _4
+    21300010: ghost moving sprite _5
+    21300012: ghost moving sprite _6
+    21300014: ghost moving sprite _7
+    21300016: ghost moving sprite _8
+    21300018: ghost moving sprite _9
+    21300020: ghost moving sprite _10
+    21300022: ghost moving sprite _11
+    21300024: ghost moving sprite _12
+    21300026: ghost moving sprite _13
+    21300028: ghost moving sprite _14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ghost moving sprite _0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 4929
+        width: 1190
+        height: 2301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _1
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 4943
+        width: 1194
+        height: 2287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _2
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 4957
+        width: 1197
+        height: 2273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _3
+      rect:
+        serializedVersion: 2
+        x: 3803
+        y: 4972
+        width: 1197
+        height: 2258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _4
+      rect:
+        serializedVersion: 2
+        x: 5059
+        y: 4986
+        width: 1202
+        height: 2244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2570
+        width: 1203
+        height: 2230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _6
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 2585
+        width: 1204
+        height: 2215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _7
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2599
+        width: 1204
+        height: 2201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _8
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 2606
+        width: 1207
+        height: 2194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _9
+      rect:
+        serializedVersion: 2
+        x: 5064
+        y: 2589
+        width: 1206
+        height: 2211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 1202
+        height: 2223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _11
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 127
+        width: 1200
+        height: 2240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _12
+      rect:
+        serializedVersion: 2
+        x: 2549
+        y: 112
+        width: 1200
+        height: 2255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _13
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 98
+        width: 1198
+        height: 2269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite _14
+      rect:
+        serializedVersion: 2
+        x: 5053
+        y: 84
+        width: 1194
+        height: 2283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

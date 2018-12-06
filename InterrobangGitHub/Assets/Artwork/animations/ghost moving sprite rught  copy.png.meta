@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: f7d245a70a3cd4fd9a3a5b2921e211f2
+timeCreated: 1543500067
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ghost moving sprite rught  copy_0
+    21300002: ghost moving sprite rught  copy_1
+    21300004: ghost moving sprite rught  copy_2
+    21300006: ghost moving sprite rught  copy_3
+    21300008: ghost moving sprite rught  copy_4
+    21300010: ghost moving sprite rught  copy_5
+    21300012: ghost moving sprite rught  copy_6
+    21300014: ghost moving sprite rught  copy_7
+    21300016: ghost moving sprite rught  copy_8
+    21300018: ghost moving sprite rught  copy_9
+    21300020: ghost moving sprite rught  copy_10
+    21300022: ghost moving sprite rught  copy_11
+    21300024: ghost moving sprite rught  copy_12
+    21300026: ghost moving sprite rught  copy_13
+    21300028: ghost moving sprite rught  copy_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4986
+        width: 1202
+        height: 2244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_1
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 4972
+        width: 1197
+        height: 2258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_2
+      rect:
+        serializedVersion: 2
+        x: 2528
+        y: 4957
+        width: 1197
+        height: 2273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_3
+      rect:
+        serializedVersion: 2
+        x: 3787
+        y: 4943
+        width: 1194
+        height: 2287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_4
+      rect:
+        serializedVersion: 2
+        x: 5046
+        y: 4929
+        width: 1190
+        height: 2301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2589
+        width: 1206
+        height: 2211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_6
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 2606
+        width: 1207
+        height: 2194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_7
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 2599
+        width: 1204
+        height: 2201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_8
+      rect:
+        serializedVersion: 2
+        x: 3764
+        y: 2585
+        width: 1204
+        height: 2215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_9
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 2570
+        width: 1203
+        height: 2230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 84
+        width: 1194
+        height: 2283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_11
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 98
+        width: 1198
+        height: 2269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_12
+      rect:
+        serializedVersion: 2
+        x: 2521
+        y: 112
+        width: 1200
+        height: 2255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_13
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 127
+        width: 1200
+        height: 2240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ghost moving sprite rught  copy_14
+      rect:
+        serializedVersion: 2
+        x: 5020
+        y: 144
+        width: 1202
+        height: 2223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
