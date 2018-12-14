@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: 66db908fce453d24bafaaf3ea0ebea42
+timeCreated: 1544757129
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: newZombieWalkLeft_0
+    21300002: newZombieWalkLeft_1
+    21300004: newZombieWalkLeft_2
+    21300006: newZombieWalkLeft_3
+    21300008: newZombieWalkLeft_4
+    21300010: newZombieWalkLeft_5
+    21300012: newZombieWalkLeft_6
+    21300014: newZombieWalkLeft_7
+    21300016: newZombieWalkLeft_8
+    21300018: newZombieWalkLeft_9
+    21300020: newZombieWalkLeft_10
+    21300022: newZombieWalkLeft_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: newZombieWalkLeft_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 973
+        width: 353
+        height: 883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_1
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 970
+        width: 365
+        height: 885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_2
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 976
+        width: 360
+        height: 881
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_3
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 985
+        width: 356
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_4
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 979
+        width: 326
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_5
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 977
+        width: 302
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_6
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 28
+        width: 298
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_7
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 36
+        width: 331
+        height: 861
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_8
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 29
+        width: 310
+        height: 874
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_9
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 21
+        width: 300
+        height: 885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_10
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 16
+        width: 303
+        height: 891
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newZombieWalkLeft_11
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 36
+        width: 351
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
