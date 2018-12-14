@@ -11,6 +11,7 @@ public class LeverPortal : MonoBehaviour
     int clickCounter = 0;
     ParticleSystem particle;
     SwitchingCharacters characters;
+    Animator anim;
 
     // Use this for initialization
     void Start()
@@ -21,7 +22,9 @@ public class LeverPortal : MonoBehaviour
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
         particle.enableEmission = false;
         highlight.SetActive(false);
-    }
+        anim = gameObject.GetComponent<Animator>();    
+            }
+
 
     // Update is called once per frame
     void Update()
@@ -35,11 +38,14 @@ public class LeverPortal : MonoBehaviour
             {
                 ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
                 ghost.SetActive(false);
+                anim.SetBool("leverState", true);
+                highlight.SetActive(false);
             }
             if (isLeverOn == false)
             {
                 ghost.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 ghost.SetActive(true);
+                anim.SetBool("leverState", false);
             }
         }
     }
@@ -77,8 +83,8 @@ public class LeverPortal : MonoBehaviour
             //if the lever is off then rotate it and start the emission 
             if (isLeverOn == false)
             {
-                transform.Rotate(new Vector3(0, 0, 100));
-
+                //transform.Rotate(new Vector3(0, 0, 100));
+                
                 particle.enableEmission = true;
                 isLeverOn = true;
             }
@@ -86,8 +92,8 @@ public class LeverPortal : MonoBehaviour
             //if the lever is pressed again it is off so rotate back and turn the emission off 
             if (clickCounter == 2 && characters.counter == 2)
             {
-                transform.Rotate(new Vector3(0, 0, -100));
-
+                //transform.Rotate(new Vector3(0, 0, -100));
+                //anim.SetBool("leverState", false);
                 particle.enableEmission = false;
 
                 isLeverOn = false;
