@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: f061cedb6d6ee4db58f4bd842455dad2
-timeCreated: 1545049625
+timeCreated: 1545049874
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: newGhostIdle other way_0
+    21300002: newGhostIdle other way_1
+    21300004: newGhostIdle other way_2
+    21300006: newGhostIdle other way_3
+    21300008: newGhostIdle other way_4
+    21300010: newGhostIdle other way_5
+    21300012: newGhostIdle other way_6
+    21300014: newGhostIdle other way_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +38,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,7 +58,111 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: newGhostIdle other way_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 2536
+        width: 869
+        height: 2387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_1
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 2514
+        width: 859
+        height: 2401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_2
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 2495
+        width: 855
+        height: 2411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_3
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 2475
+        width: 850
+        height: 2424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_4
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 16
+        width: 855
+        height: 2411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_5
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 35
+        width: 859
+        height: 2401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_6
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 57
+        width: 869
+        height: 2387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: newGhostIdle other way_7
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 76
+        width: 874
+        height: 2375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
