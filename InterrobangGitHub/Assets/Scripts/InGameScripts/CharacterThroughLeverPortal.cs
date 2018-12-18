@@ -26,10 +26,13 @@ public class CharacterThroughLeverPortal : MonoBehaviour {
         }
         else anim.SetBool("Open", false);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //if the lever is on 
         if (lever.GetComponent<LeverPortal>().isLeverOn == true)
         {
+            //set the values 
             if (collision.gameObject.tag == "zombie")
             {
                 ghostAtPortal = false;
@@ -72,6 +75,7 @@ public class CharacterThroughLeverPortal : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        //only when the lever switch is turned on allow the player to travel through
         if (portalInteractable == true)
         {
             //checks to see whether or not its the zombie or the ghost going through the portal 

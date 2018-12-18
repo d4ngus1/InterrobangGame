@@ -47,6 +47,7 @@ public class ZombieHeadThrow : MonoBehaviour
             Debug.Log(zombieHead.transform.position);
         }
     }
+
     private void ZombieHeadMovementDirection()
     {
         //when true starts moving the head to the target 
@@ -77,6 +78,7 @@ public class ZombieHeadThrow : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
+
     private void HeadMovment(Vector3 startPos, Vector3 endPos)
     {
         //percentage
@@ -101,6 +103,7 @@ public class ZombieHeadThrow : MonoBehaviour
             stopZombieMoving = true;
         }
     }
+
     private void LerpUpdate()
     {
         //increment the value 

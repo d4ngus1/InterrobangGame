@@ -12,6 +12,7 @@ public class CameraFollowPlayer : MonoBehaviour
 
     private void Update()
     {
+        //switch between what the camera will aim to follow
         if (zombieActivated) CameraSwitch(targetZombie);
         else CameraSwitch(targetGhost);
     }
@@ -20,6 +21,7 @@ public class CameraFollowPlayer : MonoBehaviour
     public void CameraSwitch(Transform selectedPlayer)
     {
         Vector3 desiredPosition = selectedPlayer.position + offset;
+        //lerp to the new position
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
     }

@@ -20,8 +20,11 @@ public class PlatformCrumble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if the platform has been stomped on 
         if (playAnimation == true)
         {
+            //make the animation play and turn off the collider
+            //and the highlihgt
             platformAnimation.SetBool("crumble", true);
             boxCollider.enabled = false;
             highlight.SetActive(false);

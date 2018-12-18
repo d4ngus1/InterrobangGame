@@ -14,6 +14,7 @@ public class GhostPassThroughScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        //ignore the collision of the ghost with the gameobject
         Physics2D.IgnoreCollision(ghost.GetComponent<BoxCollider2D>(), gameObject.GetComponent<BoxCollider2D>());
 	}
 }

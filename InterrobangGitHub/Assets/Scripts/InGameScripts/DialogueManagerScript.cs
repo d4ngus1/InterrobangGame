@@ -6,58 +6,66 @@ using UnityEngine.UI;
 public class DialogueManagerScript : MonoBehaviour
 {
     public Text nameText;
-    public Text dialogueText;
+    public Text textInDialogue;
     public Animator animator;
-    private Queue<string> sentences;
+    private Queue<string> typedSentences;
 
 
     // Use this for initialization
     void Start()
     {
-        sentences = new Queue<string>();
+        typedSentences = new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
+        //move the dialogue onto the screen
         animator.SetBool("isOpen", true);
 
         nameText.text = dialogue.name;
 
-        sentences.Clear();
+        typedSentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            typedSentences.Enqueue(sentence);
         }
 
         DisplayNextSentence();
     }
 
+
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        //if there arent any more sentences to display then end the dialogue
+        if (typedSentences.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-       string sentence = sentences.Dequeue();
+        //types the sentences letter by letter 
+        string sentence = typedSentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentenceInLetters(sentence));
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentenceInLetters(string sentence)
     {
-        dialogueText.text = "";
+        textInDialogue.text = "";
+
+        //for all chars that are stored in the array 
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            textInDialogue.text += letter;
+            //return after one frame 
             yield return null;
         }
     }
 
     void EndDialogue()
     {
+        //close the dialogue back down
         animator.SetBool("isOpen", false);
     }
 }

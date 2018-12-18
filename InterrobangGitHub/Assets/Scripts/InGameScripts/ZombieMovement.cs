@@ -74,13 +74,18 @@ public class ZombieMovement : MonoBehaviour
             //ladders
             if (onLadder)
             {
+                //changes to the ladder weight
                 anim.SetLayerWeight(1, 1);
                 anim.speed = Mathf.Abs(direction.y * moveSpeed);
+                //add in the y axis
                 transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y + direction.y * moveSpeed * Time.deltaTime);
+                //no gravity for being on ladder
                 rb.gravityScale = 0;
             }
             else
             {
+                //when the zombie comes off of the ladder set 
+                //everything back to where it should be
                 rb.gravityScale = 1;
                 anim.SetLayerWeight(1, 0);
                 anim.speed = 1;
@@ -115,9 +120,12 @@ public class ZombieMovement : MonoBehaviour
             //passes the zombie movement to the animator to play the right animation 
             anim.SetFloat("speed", direction.x);
         }
+
         //set the velocity of the rigid body to the direction of the mouse
         finalMovement.x = direction.x * moveSpeed;
         finalMovement.y = rb.velocity.y;
+
+        //if not on ladder then set the velocity 
         if (onLadder == false)
         {
             rb.velocity = finalMovement;
@@ -126,8 +134,8 @@ public class ZombieMovement : MonoBehaviour
 
     void stompUpdate()
     {
+        //find all crumble platforms that exist in the game
         var platfromCrumble = GameObject.FindObjectsOfType<PlatformCrumble>();
-
 
         //when the zombie is stomping start the timer 
         if (isZombieStomping == true)
@@ -136,6 +144,7 @@ public class ZombieMovement : MonoBehaviour
             anim.SetBool("Stomp", true);
         }
 
+        //let the zombie animation play for a bit before making the platform crumble
         if (stompCounter >= platformCrumbleTimer)
         {
             for (int i = 0; i < numOfCrumblePlatforms; i++)
@@ -150,6 +159,7 @@ public class ZombieMovement : MonoBehaviour
         //zombie has finished stomping
         if (stompCounter >= 1)
         {
+            //reset all vars back to their original state
             isZombieStomping = false;
             anim.SetBool("Stomp", false);
             stompCounter = 0;
@@ -175,8 +185,7 @@ public class ZombieMovement : MonoBehaviour
             anim.SetBool("Melee", true);
         }
 
-
-
+        //waits time before running to let the animation play for a bit
         if (meleeCounter >= 1)
         {
             for (int i = 0; i < numOfDoors; i++)
@@ -185,12 +194,15 @@ public class ZombieMovement : MonoBehaviour
                 {
                     if (meleeDoor[i].doorHealth > 0)
                     {
+                        //as long as the zombie is at the door and the health is greater than 0
+                        //take away health
                         meleeDoor[i].doorHealth -= 0.5f;
                     }
                 }
 
             }
 
+            //reset everything
             isZombieMelee = false;
             anim.SetBool("Melee", false);
             meleeCounter = 0;

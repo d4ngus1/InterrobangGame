@@ -6,45 +6,52 @@ using UnityEngine.UI;
 public class FreeCam : MonoBehaviour
 {
     public Button button;
-    public float zoomOutMin = 1;
-    public float zoomOutMax = 8;
-    Vector3 touchStart;
-    bool zoomed = false;
+    public float minimumZoomOut = 1;
+    public float maximumZoomOut = 8;
+    Vector3 startingTouchPos;
+    bool zoomActive = false;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //set up the position of a single touch
+            startingTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
         if (Input.touchCount == 0)
         {
-            zoomed = false;
+            //if there isnt any touches then zoom cant be happening
+            zoomActive = false;
         }
 
         if (Input.touchCount == 2)
         {
-            zoomed = true;
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
+            //two fingers are on screen
+            zoomActive = true;
 
-            Vector2 tZeroPastPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 tOnePastPos = touchOne.position - touchOne.deltaPosition;
+            //set up touches
+            Touch fingerZero = Input.GetTouch(0);
+            Touch fingerOne = Input.GetTouch(1);
 
-            float pastMag = (tZeroPastPos - tOnePastPos).magnitude;
-            float currentMag = (touchZero.position - touchOne.position).magnitude;
+            //last positions when it has moved
+            Vector2 fingerZeroLastPosition = fingerZero.position - fingerZero.deltaPosition;
+            Vector2 fingerOneLastPosition = fingerOne.position - fingerOne.deltaPosition;
 
-            float difference = currentMag - pastMag;
+            //mag calculations
+            float prevMagnitude = (fingerZeroLastPosition - fingerOneLastPosition).magnitude;
+            float currentMagnitude = (fingerZero.position - fingerOne.position).magnitude;
+
+            float difference = currentMagnitude - prevMagnitude;
 
             Zoom(difference * 0.01f);
         }
         else if (Input.GetMouseButton(0))
         {
-            if (zoomed == false)
+            if (zoomActive == false)
             {
-                Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 direction = startingTouchPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Camera.main.transform.position += direction;
             }
         }
@@ -53,15 +60,7 @@ public class FreeCam : MonoBehaviour
 
     void Zoom(float zoomAmount)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - zoomAmount, zoomOutMin, zoomOutMax);
-    }
-    private Vector2 GetWorldPosFinger(int fingerNum)
-    {
-        return gameObject.GetComponent<Camera>().ScreenToWorldPoint(Input.GetTouch(fingerNum).position);
-    }
-
-    private Vector2 GetWorldPos()
-    {
-        return gameObject.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+        //sets the orthographic size which is zoom
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - zoomAmount, minimumZoomOut, maximumZoomOut);
     }
 }

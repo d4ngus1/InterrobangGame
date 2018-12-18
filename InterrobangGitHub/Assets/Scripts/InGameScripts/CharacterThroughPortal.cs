@@ -19,20 +19,22 @@ public class CharacterThroughPortal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            //starts the animation for the portal
-            anim.SetBool("Open", true);
+        //starts the animation for the portal
+        anim.SetBool("Open", true);
 
-            if (collision.gameObject.tag == "zombie")
-            {
-                ghostAtPortal = false;
-            }
-            if (collision.gameObject.tag == "ghost")
-            {
-                ghostAtPortal = true;
-            }
+        //zombie is the one to enter the portal
+        if (collision.gameObject.tag == "zombie")
+        {
+            ghostAtPortal = false;
+        }
+        //ghost is the one at the portal
+        if (collision.gameObject.tag == "ghost")
+        {
+            ghostAtPortal = true;
+        }
 
-            portalInteractable = true;
-        
+        portalInteractable = true;
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

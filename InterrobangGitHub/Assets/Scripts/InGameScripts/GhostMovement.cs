@@ -32,14 +32,14 @@ public class GhostMovement : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
+                //store the variable to be used in the animator to see whether 
+                //the ghost is moving to the left or to the right
                 move = direction.x;
                 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 direction = (mousePosition - transform.position).normalized;
                 transform.position = new Vector2(transform.position.x + direction.x * movementSlowdown, transform.position.y + direction.y * movementSlowdown);
             }
             else move = 0;
-
-
 
             //sends the data from the player to the condition in the animation to allow it to change transitions 
             anim.SetFloat("gSpeed", move);

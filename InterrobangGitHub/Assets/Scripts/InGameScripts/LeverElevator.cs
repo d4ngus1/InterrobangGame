@@ -49,8 +49,6 @@ public class LeverElevator : MonoBehaviour
             ghostIsInside = true;
             highlight.SetActive(true);
         }
-
-
     }
 
     //when the ghost leaves the collider set it back to false 
@@ -62,8 +60,6 @@ public class LeverElevator : MonoBehaviour
             //allows the player to know when it can be interacted with 
             highlight.SetActive(false);
         }
-
-
     }
 
     private void Update()
