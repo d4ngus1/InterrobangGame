@@ -5,18 +5,22 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class GhostMovement : MonoBehaviour
 {
+    //exposed vars to the editor
+    public bool active = false;
+    [Range(0, 0.1f)]
+    public float movementSpeed = 0.05f;
+    [Range(0,2)]
+    public float animationSpeed = 1;
 
     Animator anim; //animation for the ghost
 
     float dirX, dirY;
     [Range(1f, 20f)]
-    public float moveSpeed = 5f;
-    public bool active = false;
-    [Range(0.00f, 0.2f)]
-    public float movementSlowdown;
+    
+    
     private Vector3 mousePosition;
     private Rigidbody2D rb;
-    public Vector2 direction;
+    private Vector2 direction;
     float move;
 
     private void Start()
@@ -37,7 +41,7 @@ public class GhostMovement : MonoBehaviour
                 move = direction.x;
                 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 direction = (mousePosition - transform.position).normalized;
-                transform.position = new Vector2(transform.position.x + direction.x * movementSlowdown, transform.position.y + direction.y * movementSlowdown);
+                transform.position = new Vector2(transform.position.x + direction.x * movementSpeed, transform.position.y + direction.y * movementSpeed);
             }
             else move = 0;
 
@@ -51,5 +55,8 @@ public class GhostMovement : MonoBehaviour
             //stop the ghost from playing the wrong animation when switching 
             anim.SetFloat("gSpeed", 0f);
         }
+
+        //changes the animation speed
+        anim.speed = animationSpeed;
     }
 }

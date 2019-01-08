@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HighlightObjectScript : MonoBehaviour
+public class ObjectHighlightScript : MonoBehaviour
 {
 
     public GameObject highlight; 

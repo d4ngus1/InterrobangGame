@@ -7,44 +7,48 @@ using UnityEngine.UI;
 public class ZombieMovement : MonoBehaviour
 {
     Animator anim; //animation for the player
+
+    //all exposed variables to the editor
     public GameObject ghost;
+    public bool active = false;
+    public bool onLadder = false;
+    [Range(0, 10)]
+    public float moveSpeed = 5f;
+    [Range(0, 5)]
+    public float waitTimeForPlatformToCrumble = 1;
+    [Range(0,5)]
+    public float waitTimeForDoorToTakeDamage = 1;
+    [Range(0,2)]
+    public float animationPlaySpeed = 1;
 
     float dirX, dirY;
-    [Range(1f, 20f)]
-    //public float moveSpeed = 5f;
-    public bool active = false;
+    int numOfCrumblePlatforms;
 
     //zombie movement left and right vars
     private Vector3 mousePos;
     private Rigidbody2D rb;
     private Vector2 direction;
     [Range(1f, 10f)]
-    public float moveSpeed = 5f;
+    
     Vector2 finalMovement;
 
     //zombie stomp ability vars
-    public float stompCounter = 0;
+    float stompCounter = 0;
     [Range(0, 10)]
-    public float stompAdder = 1;
+    float stompAdder = 1;
     bool isZombieStomping = false;
     public Button stompButton;
 
     //PlatformCrumble platfromCrumble;
     GameObject platform;
-    [Range(0, 2)]
-    public float platformCrumbleTimer = 1;
-    public int numOfCrumblePlatforms = 2;
-
+    
     //melee ability vars
     public Button meleeButton;
     bool isZombieMelee = false;
     float meleeCounter = 0;
-    [Range(0, 10)]
-    public float meleeAdder = 1;
-    public int numOfDoors;
-
-    //ladders
-    public bool onLadder = false;
+    float meleeAdder = 1;
+    int numOfDoors;
+    
 
     private void Start()
     {
@@ -88,7 +92,8 @@ public class ZombieMovement : MonoBehaviour
                 //everything back to where it should be
                 rb.gravityScale = 1;
                 anim.SetLayerWeight(1, 0);
-                anim.speed = 1;
+                //changes the frame rate at which the zombie animations are played 
+                anim.speed = animationPlaySpeed;
             }
 
         }
@@ -97,6 +102,7 @@ public class ZombieMovement : MonoBehaviour
             //stop the zombie from playing the wrong animation when switching characters 
             anim.SetFloat("speed", 0f);
         }
+        
     }
 
     private void OnEnable()
@@ -104,6 +110,8 @@ public class ZombieMovement : MonoBehaviour
         stompButton.onClick.AddListener(stompSwitch);
         meleeButton.onClick.AddListener(meleeSwitch);
     }
+
+
 
     void movementLeftRightUpdate()
     {
@@ -136,6 +144,8 @@ public class ZombieMovement : MonoBehaviour
     {
         //find all crumble platforms that exist in the game
         var platfromCrumble = GameObject.FindObjectsOfType<PlatformCrumble>();
+        //sets the number to the size of the array 
+        numOfCrumblePlatforms = platfromCrumble.Length;
 
         //when the zombie is stomping start the timer 
         if (isZombieStomping == true)
@@ -145,7 +155,7 @@ public class ZombieMovement : MonoBehaviour
         }
 
         //let the zombie animation play for a bit before making the platform crumble
-        if (stompCounter >= platformCrumbleTimer)
+        if (stompCounter >= waitTimeForPlatformToCrumble)
         {
             for (int i = 0; i < numOfCrumblePlatforms; i++)
             {
@@ -156,6 +166,16 @@ public class ZombieMovement : MonoBehaviour
             }
         }
 
+        //find the right type of platform and if it has been tapped on then start the stomp
+        var tapToInteractPlatforms = GameObject.FindObjectsOfType<TapToInteract>();
+        for (int i = 0; i < tapToInteractPlatforms.Length; i++)
+        {
+            if (tapToInteractPlatforms[i].GetComponent<TapToInteract>().platformTapped == true)
+            {
+                stompSwitch();
+            }
+        }
+
         //zombie has finished stomping
         if (stompCounter >= 1)
         {
@@ -163,8 +183,13 @@ public class ZombieMovement : MonoBehaviour
             isZombieStomping = false;
             anim.SetBool("Stomp", false);
             stompCounter = 0;
+            for (int i = 0; i < tapToInteractPlatforms.Length; i++)
+            {
+                tapToInteractPlatforms[i].GetComponent<TapToInteract>().platformTapped = false;
+            }
         }
 
+        
     }
 
     void stompSwitch()
@@ -178,6 +203,7 @@ public class ZombieMovement : MonoBehaviour
     void meleeUpdate()
     {
         var meleeDoor = GameObject.FindObjectsOfType<DoorHealth>();
+        numOfDoors = meleeDoor.Length;
 
         if (isZombieMelee == true)
         {
@@ -186,7 +212,7 @@ public class ZombieMovement : MonoBehaviour
         }
 
         //waits time before running to let the animation play for a bit
-        if (meleeCounter >= 1)
+        if (meleeCounter >= waitTimeForDoorToTakeDamage)
         {
             for (int i = 0; i < numOfDoors; i++)
             {
