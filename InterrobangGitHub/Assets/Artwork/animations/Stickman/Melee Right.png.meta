@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: ddce723a193929a46bf9a463a57807cd
+timeCreated: 1547064738
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Melee Right_0
+    21300002: Melee Right_1
+    21300004: Melee Right_2
+    21300006: Melee Right_3
+    21300008: Melee Right_4
+    21300010: Melee Right_5
+    21300012: Melee Right_6
+    21300014: Melee Right_7
+    21300016: Melee Right_8
+    21300018: Melee Right_9
+    21300020: Melee Right_10
+    21300022: Melee Right_11
+    21300024: Melee Right_12
+    21300026: Melee Right_13
+    21300028: Melee Right_14
+    21300030: Melee Right_15
+    21300032: Melee Right_16
+    21300034: Melee Right_17
+    21300036: Melee Right_18
+    21300038: Melee Right_19
+    21300040: Melee Right_20
+    21300042: Melee Right_21
+    21300044: Melee Right_22
+    21300046: Melee Right_23
+    21300048: Melee Right_24
+    21300050: Melee Right_25
+    21300052: Melee Right_26
+    21300054: Melee Right_27
+    21300056: Melee Right_28
+    21300058: Melee Right_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Melee Right_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3668
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_1
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 3668
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_2
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 3668
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_3
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 3668
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_4
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 3668
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_5
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 3668
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2751
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_7
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 2751
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_8
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 2751
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_9
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 2751
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_10
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 2751
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_11
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 2751
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1834
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_13
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1834
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_14
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1834
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_15
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1834
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_16
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 1834
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_17
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 1834
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 917
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_19
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 917
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_20
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 917
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_21
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 917
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_22
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 917
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_23
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 917
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_25
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_26
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 0
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_27
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 0
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_28
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 0
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Melee Right_29
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 0
+        width: 726
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

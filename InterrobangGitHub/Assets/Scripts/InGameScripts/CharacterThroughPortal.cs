@@ -55,7 +55,7 @@ public class CharacterThroughPortal : MonoBehaviour
             }
             if (ghostAtPortal == true)
             {
-                ghost.transform.position = new Vector3(portalReciever.transform.position.x - 2, portalReciever.transform.position.y, ghost.transform.position.z);
+                ghost.transform.position = new Vector3(portalReciever.transform.position.x, portalReciever.transform.position.y, ghost.transform.position.z);
             }
         }
     }

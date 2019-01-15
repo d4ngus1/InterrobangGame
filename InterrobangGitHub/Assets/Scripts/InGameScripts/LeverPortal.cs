@@ -22,8 +22,8 @@ public class LeverPortal : MonoBehaviour
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
         particle.enableEmission = false;
         highlight.SetActive(false);
-        anim = gameObject.GetComponent<Animator>();    
-            }
+        anim = gameObject.GetComponent<Animator>();
+    }
 
 
     // Update is called once per frame
@@ -84,7 +84,7 @@ public class LeverPortal : MonoBehaviour
             if (isLeverOn == false)
             {
                 //transform.Rotate(new Vector3(0, 0, 100));
-                
+
                 particle.enableEmission = true;
                 isLeverOn = true;
             }

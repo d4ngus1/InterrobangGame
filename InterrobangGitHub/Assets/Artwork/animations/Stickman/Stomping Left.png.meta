@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: 815043c8f0f00774bba34d7463c15d36
+timeCreated: 1547061587
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Stomping Left_0
+    21300002: Stomping Left_1
+    21300004: Stomping Left_2
+    21300006: Stomping Left_3
+    21300008: Stomping Left_4
+    21300010: Stomping Left_5
+    21300012: Stomping Left_6
+    21300014: Stomping Left_7
+    21300016: Stomping Left_8
+    21300018: Stomping Left_9
+    21300020: Stomping Left_10
+    21300022: Stomping Left_11
+    21300024: Stomping Left_12
+    21300026: Stomping Left_13
+    21300028: Stomping Left_14
+    21300030: Stomping Left_15
+    21300032: Stomping Left_16
+    21300034: Stomping Left_17
+    21300036: Stomping Left_18
+    21300038: Stomping Left_19
+    21300040: Stomping Left_20
+    21300042: Stomping Left_21
+    21300044: Stomping Left_22
+    21300046: Stomping Left_23
+    21300048: Stomping Left_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stomping Left_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 250
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 275
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_2
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 0
+        width: 300
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_3
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 0
+        width: 320
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_4
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 0
+        width: 340
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_5
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 0
+        width: 355
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_6
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 0
+        width: 370
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_7
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 0
+        width: 381
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_8
+      rect:
+        serializedVersion: 2
+        x: 3291
+        y: 0
+        width: 392
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_9
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 0
+        width: 400
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_10
+      rect:
+        serializedVersion: 2
+        x: 4102
+        y: 0
+        width: 405
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_11
+      rect:
+        serializedVersion: 2
+        x: 4510
+        y: 0
+        width: 407
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_12
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 0
+        width: 406
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_13
+      rect:
+        serializedVersion: 2
+        x: 5338
+        y: 0
+        width: 400
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_14
+      rect:
+        serializedVersion: 2
+        x: 5753
+        y: 0
+        width: 395
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_15
+      rect:
+        serializedVersion: 2
+        x: 6169
+        y: 0
+        width: 394
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_16
+      rect:
+        serializedVersion: 2
+        x: 6584
+        y: 0
+        width: 390
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_17
+      rect:
+        serializedVersion: 2
+        x: 6999
+        y: 0
+        width: 386
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_18
+      rect:
+        serializedVersion: 2
+        x: 7420
+        y: 0
+        width: 375
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_19
+      rect:
+        serializedVersion: 2
+        x: 7830
+        y: 0
+        width: 375
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_20
+      rect:
+        serializedVersion: 2
+        x: 8221
+        y: 0
+        width: 390
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_21
+      rect:
+        serializedVersion: 2
+        x: 8611
+        y: 0
+        width: 410
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_22
+      rect:
+        serializedVersion: 2
+        x: 9026
+        y: 0
+        width: 401
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_23
+      rect:
+        serializedVersion: 2
+        x: 9462
+        y: 0
+        width: 370
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stomping Left_24
+      rect:
+        serializedVersion: 2
+        x: 9922
+        y: 0
+        width: 320
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

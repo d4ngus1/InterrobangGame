@@ -9,8 +9,10 @@ public class GhostMovement : MonoBehaviour
     public bool active = false;
     [Range(0, 0.1f)]
     public float movementSpeed = 0.05f;
-    [Range(0,2)]
+    [Range(0, 2)]
     public float animationSpeed = 1;
+    [Range(0,2)]
+    public float possessionTime = 1;
 
     Animator anim; //animation for the ghost
 

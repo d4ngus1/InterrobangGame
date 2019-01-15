@@ -5,8 +5,9 @@ public class LeverElevator : MonoBehaviour
 {
     GameObject ghost;
     Animator ghostAnim;
+    Animator anim;
     float animTimer;
-    public float turnGhostOff = 1;
+    float turnGhostOff = 1;
     public GameObject highlight;
     public GameObject elevatorObject;
     [Range(0, 10)]
@@ -16,7 +17,6 @@ public class LeverElevator : MonoBehaviour
     public float elevatorSpeed = 0.05f; 
     bool ghostIsInside = false;
     bool isLeverOn = false;
-    bool leverRotate = false;
     int clickCounter = 0;
     bool runTimer = false;
     bool elevatorUpdate = false;
@@ -30,6 +30,9 @@ public class LeverElevator : MonoBehaviour
         //set up the ghost game object
         ghost = GameObject.FindGameObjectWithTag("ghost");
         ghostAnim = ghost.GetComponent<Animator>();
+
+        //set up the animator for the lever state
+        anim = gameObject.GetComponent<Animator>();
 
         //gets the particle system off of the lever and sets it to false
         particle = gameObject.GetComponent<ParticleSystem>();
@@ -71,15 +74,16 @@ public class LeverElevator : MonoBehaviour
             {
                 ghost.transform.position = ghostPosWhenLeverOn;
 
-                if (animTimer > turnGhostOff)
+                if (animTimer > ghost.GetComponent<GhostMovement>().possessionTime)
                 {
                     particle.enableEmission = true;
                     ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
                     ghost.SetActive(false);
-                    leverRotate = true;
                     runTimer = false;
                     elevatorUpdate = true;
                     animTimer = 0;
+                    anim.SetBool("leverState", true);
+                    highlight.SetActive(false);
                 }
             }
             else
@@ -96,12 +100,6 @@ public class LeverElevator : MonoBehaviour
 
         //keeps the highlight behind the lever
         highlight.gameObject.transform.rotation = gameObject.transform.rotation;
-
-        if (leverRotate == true)
-        {
-            transform.Rotate(new Vector3(0, 0, 100));
-            leverRotate = false;
-        }
 
         if (runTimer == true)
         {
@@ -138,10 +136,9 @@ public class LeverElevator : MonoBehaviour
             if (clickCounter == 2 && characters.counter == 2)
             {
                 ghostAnim.SetBool("possess", false);
-                transform.Rotate(new Vector3(0, 0, -100));
                 elevatorUpdate = false;
                 particle.enableEmission = false;
-
+                anim.SetBool("leverState", false);
                 isLeverOn = false;
             }
         }

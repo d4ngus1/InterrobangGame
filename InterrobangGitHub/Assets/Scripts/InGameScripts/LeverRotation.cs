@@ -9,27 +9,30 @@ public class LeverRotation : MonoBehaviour
     bool ghostIsInside = false;
     bool isLeverOn = false;
     int clickCounter = 0;
-    
+
+    Animator anim;
+
     //rotation vars
+    public float rotationAmount = 90;
+    public bool rotateLeft = true;
     [Range (0,1)]
     public float rotationSpeed = 0.5f;
     //the amount of rotation needed for the object 
-    public float maxRotation = 180;
-    float rotationPosition;
     float initialRotation;
-    public bool rotateLeft = true;
+    
 
     //animation vars
     bool runTimer = false;
     bool rotationUpdate = false;
     private Vector2 ghostPosWhenLeverOn;
     float animTimer;
-    public float turnGhostOff = 1;
-    bool leverRotate = false;
+    float turnGhostOff = 1;
     Animator ghostAnim;
 
     ParticleSystem particle;
     SwitchingCharacters characters;
+    
+    float rotationSum;
 
     private void Start()
     {
@@ -45,6 +48,10 @@ public class LeverRotation : MonoBehaviour
 
         //stores the initial rotation so it can be set back to it 
         initialRotation = rotationObject.GetComponent<Transform>().eulerAngles.z;
+
+        rotationSum = rotationAmount;
+
+        anim = gameObject.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -81,15 +88,16 @@ public class LeverRotation : MonoBehaviour
             {
                 ghost.transform.position = ghostPosWhenLeverOn;
 
-                if (animTimer > turnGhostOff)
+                if (animTimer > ghost.GetComponent<GhostMovement>().possessionTime)
                 {
                     particle.enableEmission = true;
                     ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
                     ghost.SetActive(false);
-                    leverRotate = true;
                     runTimer = false;
                     rotationUpdate = true;
                     animTimer = 0;
+                    anim.SetBool("leverState", true);
+                    highlight.SetActive(false);
                 }
             }
             else
@@ -102,12 +110,7 @@ public class LeverRotation : MonoBehaviour
         if (isLeverOn == false)
         {
             RotationUpdateOff();
-        }
-
-        if (leverRotate == true)
-        {
-            transform.Rotate(new Vector3(0, 0, 100));
-            leverRotate = false;
+            anim.SetBool("leverState", false);
         }
 
         if (runTimer == true)
@@ -122,10 +125,6 @@ public class LeverRotation : MonoBehaviour
 
         //keeps the highlight behind the lever
         highlight.gameObject.transform.rotation = gameObject.transform.rotation;
-
-        //keeps track of the objects rotation
-        //stores the initial rotation of the object
-        rotationPosition = rotationObject.GetComponent<Transform>().eulerAngles.z;
     }
 
     private void OnMouseDown()
@@ -141,9 +140,9 @@ public class LeverRotation : MonoBehaviour
             //if the lever is off then rotate it and start the emission 
             if (isLeverOn == false)
             {
-                ghostPosWhenLeverOn = ghost.transform.position;
                 ghostAnim.SetBool("possess", true);
                 runTimer = true;
+                ghostPosWhenLeverOn = ghost.transform.position;
                 particle.enableEmission = true;
                 isLeverOn = true;
             }
@@ -152,43 +151,41 @@ public class LeverRotation : MonoBehaviour
             if (clickCounter == 2 && characters.counter == 2)
             {
                 ghostAnim.SetBool("possess", false);
-                transform.Rotate(new Vector3(0, 0, -100));
                 particle.enableEmission = false;
                 rotationUpdate = false;
                 isLeverOn = false;
             }
         }
-
     }
 
     private void RotationUpdateOn()
     {
-        //rotating the object to the left
-        if (rotationPosition > maxRotation && rotateLeft == true)
+        if (rotateLeft && rotationAmount > 0)
         {
             rotationObject.transform.Rotate(0, 0, -rotationSpeed);
+            rotationAmount -= rotationSpeed;
         }
 
-        //rotating the object to the right 
-        if (rotationPosition < maxRotation && rotateLeft == false)
+        if (!rotateLeft && rotationAmount > 0)
         {
             rotationObject.transform.Rotate(0, 0, rotationSpeed);
+            rotationAmount -= rotationSpeed;
         }
 
     }
 
     private void RotationUpdateOff()
     {
-        //rotating the object back to the right 
-        if (rotationPosition < initialRotation && rotateLeft == true)
+        if (rotateLeft && rotationAmount < rotationSum)
         {
             rotationObject.transform.Rotate(0, 0, rotationSpeed);
+            rotationAmount += rotationSpeed;
         }
 
-        //rotating the object back to the left
-        if (rotationPosition > initialRotation && rotateLeft == false)
+        if (!rotateLeft && rotationAmount < rotationSum)
         {
             rotationObject.transform.Rotate(0, 0, -rotationSpeed);
+            rotationAmount += rotationSpeed;
         }
     }
 }

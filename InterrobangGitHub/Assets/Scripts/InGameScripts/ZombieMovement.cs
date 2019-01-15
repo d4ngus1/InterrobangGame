@@ -16,9 +16,9 @@ public class ZombieMovement : MonoBehaviour
     public float moveSpeed = 5f;
     [Range(0, 5)]
     public float waitTimeForPlatformToCrumble = 1;
-    [Range(0,5)]
+    [Range(0, 5)]
     public float waitTimeForDoorToTakeDamage = 1;
-    [Range(0,2)]
+    [Range(0, 2)]
     public float animationPlaySpeed = 1;
 
     float dirX, dirY;
@@ -29,7 +29,7 @@ public class ZombieMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction;
     [Range(1f, 10f)]
-    
+
     Vector2 finalMovement;
 
     //zombie stomp ability vars
@@ -41,14 +41,14 @@ public class ZombieMovement : MonoBehaviour
 
     //PlatformCrumble platfromCrumble;
     GameObject platform;
-    
+
     //melee ability vars
     public Button meleeButton;
     bool isZombieMelee = false;
     float meleeCounter = 0;
     float meleeAdder = 1;
     int numOfDoors;
-    
+
 
     private void Start()
     {
@@ -102,7 +102,7 @@ public class ZombieMovement : MonoBehaviour
             //stop the zombie from playing the wrong animation when switching characters 
             anim.SetFloat("speed", 0f);
         }
-        
+
     }
 
     private void OnEnable()
@@ -167,10 +167,11 @@ public class ZombieMovement : MonoBehaviour
         }
 
         //find the right type of platform and if it has been tapped on then start the stomp
-        var tapToInteractPlatforms = GameObject.FindObjectsOfType<TapToInteract>();
-        for (int i = 0; i < tapToInteractPlatforms.Length; i++)
+        var tapToInteractAssets = GameObject.FindObjectsOfType<TapToInteract>();
+        for (int i = 0; i < tapToInteractAssets.Length; i++)
         {
-            if (tapToInteractPlatforms[i].GetComponent<TapToInteract>().platformTapped == true)
+            //checks to see if any of the platforms have been tapped on 
+            if (tapToInteractAssets[i].GetComponent<TapToInteract>().platformTapped == true)
             {
                 stompSwitch();
             }
@@ -183,13 +184,11 @@ public class ZombieMovement : MonoBehaviour
             isZombieStomping = false;
             anim.SetBool("Stomp", false);
             stompCounter = 0;
-            for (int i = 0; i < tapToInteractPlatforms.Length; i++)
+            for (int i = 0; i < tapToInteractAssets.Length; i++)
             {
-                tapToInteractPlatforms[i].GetComponent<TapToInteract>().platformTapped = false;
+                tapToInteractAssets[i].GetComponent<TapToInteract>().platformTapped = false;
             }
         }
-
-        
     }
 
     void stompSwitch()
@@ -211,6 +210,17 @@ public class ZombieMovement : MonoBehaviour
             anim.SetBool("Melee", true);
         }
 
+        //find the right type of melee asset and if it has been tapped on then start the melee
+        var tapToInteractAssets2 = GameObject.FindObjectsOfType<TapToInteract>();
+        for (int i = 0; i < tapToInteractAssets2.Length; i++)
+        {
+            //checks to see if any of the melee assets have been tapped on by the player 
+            if (tapToInteractAssets2[i].GetComponent<TapToInteract>().meleeTapped == true)
+            {
+                meleeSwitch();
+            }
+        }
+
         //waits time before running to let the animation play for a bit
         if (meleeCounter >= waitTimeForDoorToTakeDamage)
         {
@@ -228,13 +238,17 @@ public class ZombieMovement : MonoBehaviour
 
             }
 
+            for (int i = 0; i < tapToInteractAssets2.Length; i++)
+            {
+                //checks to see if any of the melee assets have been tapped on by the player 
+                tapToInteractAssets2[i].GetComponent<TapToInteract>().meleeTapped = false;
+            }
+
             //reset everything
             isZombieMelee = false;
             anim.SetBool("Melee", false);
             meleeCounter = 0;
         }
-
-
     }
 
     void meleeSwitch()

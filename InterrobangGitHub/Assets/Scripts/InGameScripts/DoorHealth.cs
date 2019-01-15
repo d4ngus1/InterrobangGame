@@ -46,6 +46,7 @@ public class DoorHealth : MonoBehaviour
             anim.SetInteger("Door Health", 0);
             boxCollider.enabled = false;
             highlight.SetActive(false);
+            doorWillTakeDamage = false;
         }
     }
 
