@@ -3,19 +3,24 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class leverLoader : MonoBehaviour
+public class LevelLoaderScript : MonoBehaviour
 {
 
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
 
-    public void LoadLevel(int sceneIndex)
+    public void LoadLevel(string sceneName)
     {
-        StartCoroutine(LoadAsynchronously(sceneIndex));    
+        StartCoroutine(LoadAsynchronously(sceneName));
     }
 
-    IEnumerator LoadAsynchronously(int sceneIndex)
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator LoadAsynchronously(string sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 

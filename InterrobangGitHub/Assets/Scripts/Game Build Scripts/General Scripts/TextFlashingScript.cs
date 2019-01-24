@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class TextFlashing : MonoBehaviour
+public class TextFlashingScript : MonoBehaviour
 {
 
     Text text;
