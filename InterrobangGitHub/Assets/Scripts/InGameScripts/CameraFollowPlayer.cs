@@ -10,6 +10,10 @@ public class CameraFollowPlayer : MonoBehaviour
     public Vector3 offset; //the offset of the camera to the player
     public bool zombieActivated = true;
 
+    private void Start()
+    {
+       GetComponent<Camera>().transform.position = targetZombie.transform.position;
+    }
     private void Update()
     {
         //switch between what the camera will aim to follow
