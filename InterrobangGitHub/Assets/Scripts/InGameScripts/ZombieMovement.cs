@@ -20,6 +20,7 @@ public class ZombieMovement : MonoBehaviour
     public float waitTimeForDoorToTakeDamage = 1;
     [Range(0, 2)]
     public float animationPlaySpeed = 1;
+    public bool ghostFollowZombie;
 
     float dirX, dirY;
     int numOfCrumblePlatforms;
@@ -31,6 +32,8 @@ public class ZombieMovement : MonoBehaviour
     [Range(1f, 10f)]
 
     Vector2 finalMovement;
+
+    Vector2 zombiePos;
 
     //zombie stomp ability vars
     float stompCounter = 0;
@@ -80,7 +83,7 @@ public class ZombieMovement : MonoBehaviour
             {
                 //changes to the ladder weight
                 anim.SetLayerWeight(1, 1);
-                anim.speed = Mathf.Abs(direction.y * moveSpeed);
+                anim.speed = Mathf.Abs(direction.y * moveSpeed) + Mathf.Abs(direction.x * moveSpeed) / 2;
                 //add in the y axis
                 transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y + direction.y * moveSpeed * Time.deltaTime);
                 //no gravity for being on ladder
@@ -103,12 +106,19 @@ public class ZombieMovement : MonoBehaviour
             anim.SetFloat("speed", 0f);
         }
 
+        if(ghostFollowZombie)
+        {
+            zombiePos = gameObject.transform.position;
+            zombiePos.x = zombiePos.x - 1;
+
+            ghost.transform.position = zombiePos;
+        }
     }
 
     private void OnEnable()
     {
-        stompButton.onClick.AddListener(stompSwitch);
-        meleeButton.onClick.AddListener(meleeSwitch);
+        //stompButton.onClick.AddListener(stompSwitch);
+        //meleeButton.onClick.AddListener(meleeSwitch);
     }
 
 
@@ -137,6 +147,11 @@ public class ZombieMovement : MonoBehaviour
         if (onLadder == false)
         {
             rb.velocity = finalMovement;
+        }
+
+        if(onLadder)
+        {
+            rb.velocity = Vector2.zero;
         }
     }
 

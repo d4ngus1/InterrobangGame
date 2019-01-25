@@ -6,6 +6,7 @@ public class Ladder : MonoBehaviour
     ZombieMovement zombie;
     bool ladderClimbable = false;
     public GameObject highlight;
+    public bool autoLadder;
 
     // Use this for initialization
     void Start()
@@ -19,6 +20,12 @@ public class Ladder : MonoBehaviour
         if (collision.tag == "zombie")
         {
             ladderClimbable = true;
+        }
+
+        if (autoLadder)
+        {
+            zombie.onLadder = true;
+            highlight.SetActive(false);
         }
     }
 
@@ -35,7 +42,7 @@ public class Ladder : MonoBehaviour
     //only works when the player is whithin the collider, make the zombie ladder on and highlight off
     private void OnMouseDown()
     {
-        if (ladderClimbable == true)
+        if (ladderClimbable == true && !autoLadder)
         {
             zombie.onLadder = true;
             highlight.SetActive(false);

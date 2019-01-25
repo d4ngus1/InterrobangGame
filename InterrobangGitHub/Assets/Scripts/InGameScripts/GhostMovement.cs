@@ -7,19 +7,21 @@ public class GhostMovement : MonoBehaviour
 {
     //exposed vars to the editor
     public bool active = false;
-    [Range(0, 0.1f)]
+    [Range(0, 10)]
     public float movementSpeed = 0.05f;
     [Range(0, 2)]
     public float animationSpeed = 1;
-    [Range(0,2)]
+    [Range(0, 2)]
     public float possessionTime = 1;
+
+
 
     Animator anim; //animation for the ghost
 
     float dirX, dirY;
     [Range(1f, 20f)]
-    
-    
+
+
     private Vector3 mousePosition;
     private Rigidbody2D rb;
     private Vector2 direction;
@@ -43,7 +45,7 @@ public class GhostMovement : MonoBehaviour
                 move = direction.x;
                 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 direction = (mousePosition - transform.position).normalized;
-                transform.position = new Vector2(transform.position.x + direction.x * movementSpeed, transform.position.y + direction.y * movementSpeed);
+                transform.position = new Vector2(transform.position.x + direction.x * movementSpeed * Time.deltaTime, transform.position.y + direction.y * movementSpeed * Time.deltaTime);
             }
             else move = 0;
 
