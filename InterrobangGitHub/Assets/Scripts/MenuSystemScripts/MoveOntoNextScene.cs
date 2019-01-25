@@ -2,17 +2,18 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class MoveOntoNextScene : MonoBehaviour {
-	
-	// Update is called once per frame
-	void Update ()
+public class MoveOntoNextScene : MonoBehaviour
+{
+
+    public string sceneName;
+
+    void Update()
     {
-    
-        //if the user taps the screen unity will load the next scene in the list 
+        //will load the screen if the mouse or a tap is clicked on the screen  
         if (Input.GetMouseButton(0))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(sceneName);
         }
-	
-	}
+
+    }
 }
