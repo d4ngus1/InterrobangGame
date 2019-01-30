@@ -7,6 +7,7 @@ public class GhostMovement : MonoBehaviour
 {
     //exposed vars to the editor
     public bool active = false;
+    public Vector3 cameraOffset;
     [Range(0, 10)]
     public float movementSpeed = 0.05f;
     [Range(0, 2)]
@@ -14,7 +15,7 @@ public class GhostMovement : MonoBehaviour
     [Range(0, 2)]
     public float possessionTime = 1;
 
-
+    GameObject freeCam;
 
     Animator anim; //animation for the ghost
 
@@ -31,6 +32,7 @@ public class GhostMovement : MonoBehaviour
     {
         //sets up the animation we want for the ghost
         anim = GetComponent<Animator>();
+        freeCam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
@@ -38,21 +40,22 @@ public class GhostMovement : MonoBehaviour
     {
         if (active)
         {
-            if (Input.GetMouseButton(0))
-            {
-                //store the variable to be used in the animator to see whether 
-                //the ghost is moving to the left or to the right
-                move = direction.x;
-                mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                direction = (mousePosition - transform.position).normalized;
-                transform.position = new Vector2(transform.position.x + direction.x * movementSpeed * Time.deltaTime, transform.position.y + direction.y * movementSpeed * Time.deltaTime);
-            }
-            else move = 0;
+                if (Input.GetMouseButton(0))
+                {
+                    //store the variable to be used in the animator to see whether 
+                    //the ghost is moving to the left or to the right
+                    move = direction.x;
+                    mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    direction = (mousePosition - transform.position).normalized;
+                    transform.position = new Vector2(transform.position.x + direction.x * movementSpeed * Time.deltaTime, transform.position.y + direction.y * movementSpeed * Time.deltaTime);
+                }
+                else move = 0;
 
-            //sends the data from the player to the condition in the animation to allow it to change transitions 
-            anim.SetFloat("gSpeed", move);
+                //sends the data from the player to the condition in the animation to allow it to change transitions 
+                anim.SetFloat("gSpeed", move);
 
-            transform.eulerAngles = new Vector2(0, -360);
+                transform.eulerAngles = new Vector2(0, -360);
+            
         }
         else
         {

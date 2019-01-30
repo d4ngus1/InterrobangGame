@@ -12,6 +12,7 @@ public class ZombieMovement : MonoBehaviour
     public GameObject ghost;
     public bool active = false;
     public bool onLadder = false;
+    public Vector3 cameraOffset;
     [Range(0, 10)]
     public float moveSpeed = 5f;
     [Range(0, 5)]
@@ -77,7 +78,7 @@ public class ZombieMovement : MonoBehaviour
 
             //zombie melee ability 
             meleeUpdate();
-
+            
             //ladders
             if (onLadder)
             {

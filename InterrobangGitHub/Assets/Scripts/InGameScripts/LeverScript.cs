@@ -69,7 +69,7 @@ public class LeverScript : MonoBehaviour
             else
             {
                 wall.gameObject.transform.position = wallPos;
-                ghost.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                ghost.GetComponent<SpriteRenderer>().sortingOrder = 10;
                 ghost.SetActive(true);
             }
         }

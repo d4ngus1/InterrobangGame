@@ -43,7 +43,7 @@ public class LeverPortal : MonoBehaviour
             }
             if (isLeverOn == false)
             {
-                ghost.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                ghost.GetComponent<SpriteRenderer>().sortingOrder = 10;
                 ghost.SetActive(true);
                 anim.SetBool("leverState", false);
             }

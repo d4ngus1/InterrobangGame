@@ -102,7 +102,7 @@ public class LeverRotation : MonoBehaviour
             }
             else
             {
-                ghost.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                ghost.GetComponent<SpriteRenderer>().sortingOrder = 10;
                 ghost.SetActive(true);
             }
         }
@@ -121,6 +121,11 @@ public class LeverRotation : MonoBehaviour
         if (rotationUpdate == true)
         {
             RotationUpdateOn();
+        }
+
+        if (anim.GetBool("possess") == true)
+        {
+            ghost.transform.position = ghostPosWhenLeverOn;
         }
 
         //keeps the highlight behind the lever

@@ -10,6 +10,7 @@ public class SwitchingCharacters : MonoBehaviour
     private ZombieMovement zombieMovement;
     private GhostMovement ghostMovement;
     private CameraFollowPlayer camera;
+    GameObject zombie;
 
     public int counter = 1;
 
@@ -20,6 +21,7 @@ public class SwitchingCharacters : MonoBehaviour
         camera = GameObject.FindObjectOfType<CameraFollowPlayer>();
         stompButton = GameObject.FindGameObjectWithTag("stomp");
         meleeButton = GameObject.FindGameObjectWithTag("melee");
+        zombie = GameObject.FindGameObjectWithTag("zombie");
     }
 
     private void Start()
@@ -47,16 +49,17 @@ public class SwitchingCharacters : MonoBehaviour
             zombieMovement.active = true;
             camera.zombieActivated = true;
             ghostMovement.active = false;
-            stompButton.GetComponent<Animator>().SetBool("zombieActive", true);
-            meleeButton.GetComponent<Animator>().SetBool("zombieActive", true);
+            //stompButton.GetComponent<Animator>().SetBool("zombieActive", true);
+            //meleeButton.GetComponent<Animator>().SetBool("zombieActive", true);
         }
         if (counter == 2)
         {
+            zombie.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             ghostMovement.active = true;
             camera.zombieActivated = false;
             zombieMovement.active = false;
-            stompButton.GetComponent<Animator>().SetBool("zombieActive", false);
-            meleeButton.GetComponent<Animator>().SetBool("zombieActive", false);
+            //stompButton.GetComponent<Animator>().SetBool("zombieActive", false);
+            //meleeButton.GetComponent<Animator>().SetBool("zombieActive", false);
         }
         
     }

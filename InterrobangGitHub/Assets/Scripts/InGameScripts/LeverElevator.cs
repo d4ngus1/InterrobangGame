@@ -10,7 +10,7 @@ public class LeverElevator : MonoBehaviour
     float turnGhostOff = 1;
     public GameObject highlight;
     public GameObject elevatorObject;
-    [Range(0, 10)]
+    [Range(-10, 10)]
     public float maxHeight = 0f;
     float initialHeight;
     [Range(0, 1)]
@@ -41,7 +41,7 @@ public class LeverElevator : MonoBehaviour
         highlight.SetActive(false);
 
         //set up the max height of the elevator
-        initialHeight = elevatorObject.transform.position.y;
+        initialHeight = elevatorObject.transform.localPosition.y;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -88,7 +88,7 @@ public class LeverElevator : MonoBehaviour
             }
             else
             {
-                ghost.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                ghost.GetComponent<SpriteRenderer>().sortingOrder = 10;
                 ghost.SetActive(true);
             }
         }
@@ -148,7 +148,7 @@ public class LeverElevator : MonoBehaviour
     private void ElevatorUpdateOn()
     {
         //moves the platform up 
-        if (elevatorObject.transform.position.y < maxHeight)
+        if (elevatorObject.transform.localPosition.y < maxHeight)
         {
             elevatorObject.transform.Translate(0, elevatorSpeed, 0);
         }
@@ -156,7 +156,7 @@ public class LeverElevator : MonoBehaviour
 
     private void ElevatorUpdateOff()
     {
-        if (elevatorObject.transform.position.y > initialHeight)
+        if (elevatorObject.transform.localPosition.y > initialHeight)
         {
             elevatorObject.transform.Translate(0, -elevatorSpeed, 0);
         }
