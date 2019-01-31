@@ -127,18 +127,16 @@ public class ZombieMovement : MonoBehaviour
     void movementLeftRightUpdate()
     {
         //sets where the screen is touched to the zombie movement 
-        if (Input.mousePosition.x < 1710 || Input.mousePosition.y > 290)
+        if (Input.GetMouseButton(0))
         {
-            if (Input.GetMouseButton(0))
-            {
-                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                direction = (mousePos - transform.position).normalized;
-            }
-            else direction = Vector2.zero;
-
-            //passes the zombie movement to the animator to play the right animation 
-            anim.SetFloat("speed", direction.x);
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            direction = (mousePos - transform.position).normalized;
         }
+        else direction = Vector2.zero;
+
+        //passes the zombie movement to the animator to play the right animation 
+        anim.SetFloat("speed", direction.x);
+
 
         //set the velocity of the rigid body to the direction of the mouse
         finalMovement.x = direction.x * moveSpeed;
@@ -150,7 +148,7 @@ public class ZombieMovement : MonoBehaviour
             rb.velocity = finalMovement;
         }
 
-        if(onLadder)
+        if (onLadder)
         {
             rb.velocity = Vector2.zero;
         }

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LeverElevator : MonoBehaviour
 {
+    CameraPan cameraPan;
     GameObject ghost;
     Animator ghostAnim;
     Animator anim;
@@ -42,6 +43,8 @@ public class LeverElevator : MonoBehaviour
 
         //set up the max height of the elevator
         initialHeight = elevatorObject.transform.localPosition.y;
+
+        cameraPan = gameObject.GetComponent<CameraPan>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -152,13 +155,22 @@ public class LeverElevator : MonoBehaviour
         {
             elevatorObject.transform.Translate(0, elevatorSpeed, 0);
         }
+        
+        cameraPan.StartCorotine();
+        cameraPan.panToObject = true;
+
+        
+        
     }
 
     private void ElevatorUpdateOff()
     {
+
+        cameraPan.panToObject = false;
+
         if (elevatorObject.transform.localPosition.y > initialHeight)
         {
             elevatorObject.transform.Translate(0, -elevatorSpeed, 0);
-        }
+        }        
     }
 }

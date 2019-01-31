@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LeverRotation : MonoBehaviour
 {
+    CameraPan cameraPan;
     GameObject ghost;
     public GameObject highlight;
     public GameObject rotationObject;
@@ -52,6 +53,8 @@ public class LeverRotation : MonoBehaviour
         rotationSum = rotationAmount;
 
         anim = gameObject.GetComponent<Animator>();
+
+        cameraPan = gameObject.GetComponent<CameraPan>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -177,10 +180,15 @@ public class LeverRotation : MonoBehaviour
             rotationAmount -= rotationSpeed;
         }
 
+        cameraPan.StartCorotine();
+        cameraPan.panToObject = true;
+
     }
 
     private void RotationUpdateOff()
     {
+        cameraPan.panToObject = false;
+
         if (rotateLeft && rotationAmount < rotationSum)
         {
             rotationObject.transform.Rotate(0, 0, rotationSpeed);

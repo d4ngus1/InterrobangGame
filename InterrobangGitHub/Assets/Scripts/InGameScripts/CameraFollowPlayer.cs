@@ -7,18 +7,19 @@ public class CameraFollowPlayer : MonoBehaviour
     public Transform targetGhost;
 
     public float smoothSpeed = 1;  //how fast the camera will react to the moving object 
-    public bool zombieActivated = true;
+    public bool zombieActivated = true, lockedToPlayers = true;
 
     Vector3 desiredPosition;
     Vector3 offset; //the offset of the camera to the player
 
     private void Update()
     {
-        //switch between what the camera will aim to follow
-        if (zombieActivated) CameraSwitch(targetZombie, true);
-        else CameraSwitch(targetGhost, false);
-
-        
+        if (lockedToPlayers)
+        {
+            //switch between what the camera will aim to follow
+            if (zombieActivated) CameraSwitch(targetZombie, true);
+            else CameraSwitch(targetGhost, false);
+        }
     }
 
     //passes in the selected player and moves the camera to that players position 
