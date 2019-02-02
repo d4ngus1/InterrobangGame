@@ -14,6 +14,9 @@ public class SwitchingCharacters : MonoBehaviour
 
     public int counter = 1;
 
+    [HideInInspector]
+    public int amountOfCharacterSwitches;
+
     private void Awake()
     {
         zombieMovement = GameObject.FindObjectOfType<ZombieMovement>();
@@ -39,6 +42,7 @@ public class SwitchingCharacters : MonoBehaviour
     void SwitchCharacter()
     {
         counter++;
+        amountOfCharacterSwitches++;
 
         //reset the counter
         if (counter > 2) counter = 1;
