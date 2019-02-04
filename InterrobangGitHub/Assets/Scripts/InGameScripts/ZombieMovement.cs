@@ -28,7 +28,8 @@ public class ZombieMovement : MonoBehaviour
 
     //zombie movement left and right vars
     private Vector3 mousePos;
-    private Rigidbody2D rb;
+    [HideInInspector]
+    public Rigidbody2D rb;
     private Vector2 direction;
     [Range(1f, 10f)]
 
