@@ -35,6 +35,9 @@ public class LeverRotation : MonoBehaviour
     
     float rotationSum;
 
+    [HideInInspector]
+    public bool pan;
+
     private void Start()
     {
         //set up the ghost game object
@@ -55,6 +58,7 @@ public class LeverRotation : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
 
         cameraPan = gameObject.GetComponent<CameraPan>();
+        gameObject.GetComponent<CameraPan>().enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -64,6 +68,7 @@ public class LeverRotation : MonoBehaviour
         {
             ghostIsInside = true;
             highlight.SetActive(true);
+            gameObject.GetComponent<CameraPan>().enabled = true;
         }
 
 
@@ -77,6 +82,7 @@ public class LeverRotation : MonoBehaviour
             ghostIsInside = false;
             //allows the player to know when it can be interacted with 
             highlight.SetActive(false);
+            gameObject.GetComponent<CameraPan>().enabled = false;
         }
 
 
@@ -156,7 +162,7 @@ public class LeverRotation : MonoBehaviour
             }
 
             //if the lever is pressed again it is off so rotate back and turn the emission off 
-            if (clickCounter == 2 && characters.counter == 2)
+            if (clickCounter == 2 && characters.counter == 2 && ghost.activeInHierarchy == false)
             {
                 ghostAnim.SetBool("possess", false);
                 particle.enableEmission = false;
@@ -180,14 +186,17 @@ public class LeverRotation : MonoBehaviour
             rotationAmount -= rotationSpeed;
         }
 
-        cameraPan.StartCorotine();
-        cameraPan.panToObject = true;
-
+        if (pan)
+        {
+            cameraPan.objectPan = rotationObject;
+            cameraPan.panToObject = true;
+        }
     }
 
     private void RotationUpdateOff()
     {
         cameraPan.panToObject = false;
+        pan = true;
 
         if (rotateLeft && rotationAmount < rotationSum)
         {

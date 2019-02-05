@@ -22,7 +22,10 @@ public class LeverElevator : MonoBehaviour
     bool runTimer = false;
     bool elevatorUpdate = false;
     Vector2 ghostPosWhenLeverOn;
+    LeverRotation leverRotation;
 
+    [HideInInspector]
+    public bool pan;
     ParticleSystem particle;
     SwitchingCharacters characters;
 
@@ -45,6 +48,7 @@ public class LeverElevator : MonoBehaviour
         initialHeight = elevatorObject.transform.localPosition.y;
 
         cameraPan = gameObject.GetComponent<CameraPan>();
+        gameObject.GetComponent<CameraPan>().enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,6 +58,7 @@ public class LeverElevator : MonoBehaviour
         {
             ghostIsInside = true;
             highlight.SetActive(true);
+            gameObject.GetComponent<CameraPan>().enabled = true;
         }
     }
 
@@ -65,6 +70,8 @@ public class LeverElevator : MonoBehaviour
             ghostIsInside = false;
             //allows the player to know when it can be interacted with 
             highlight.SetActive(false);
+
+            gameObject.GetComponent<CameraPan>().enabled = false;
         }
     }
 
@@ -136,7 +143,7 @@ public class LeverElevator : MonoBehaviour
             }
 
             //if the lever is pressed again it is off so rotate back and turn the emission off 
-            if (clickCounter == 2 && characters.counter == 2)
+            if (clickCounter == 2 && characters.counter == 2 && ghost.activeInHierarchy == false)
             {
                 ghostAnim.SetBool("possess", false);
                 elevatorUpdate = false;
@@ -156,17 +163,19 @@ public class LeverElevator : MonoBehaviour
             elevatorObject.transform.Translate(0, elevatorSpeed, 0);
         }
         
-        cameraPan.StartCorotine();
-        cameraPan.panToObject = true;
+        if (pan)
+        {
+            cameraPan.objectPan = elevatorObject;
+            cameraPan.panToObject = true;
+        }
 
-        
-        
     }
 
     private void ElevatorUpdateOff()
     {
 
         cameraPan.panToObject = false;
+        pan = true;
 
         if (elevatorObject.transform.localPosition.y > initialHeight)
         {

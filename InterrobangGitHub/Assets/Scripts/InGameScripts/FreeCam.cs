@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class FreeCam : MonoBehaviour
 {
-    public Button button;
-    public float minimumZoomOut = 1;
+    public float minimumZoomOut = 3.6f;
     public float maximumZoomOut = 8;
     Vector3 startingTouchPos;
     bool zoomActive = false;

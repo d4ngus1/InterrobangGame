@@ -17,9 +17,16 @@ public class PressurePadScript : MonoBehaviour
     float activateTimer, storedRotation, storedHeight;
     bool padPressed;
 
+    //camera pan vars
+    CameraPan cameraPan;
+    [HideInInspector]
+    public bool pan;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        cameraPan = gameObject.GetComponent<CameraPan>();
+        gameObject.GetComponent<CameraPan>().enabled = false;
         storedRotation = rotationAmount;
         storedHeight = elevatorObject.GetComponent<Transform>().localPosition.y;
     }
@@ -55,6 +62,12 @@ public class PressurePadScript : MonoBehaviour
             {
                 elevatorObject.transform.Translate(0, elevatorSpeed, 0);
             }
+
+            if (pan)
+            {
+                cameraPan.objectPan = elevatorObject;
+                cameraPan.panToObject = true;
+            }
         }
         else
         {
@@ -63,6 +76,9 @@ public class PressurePadScript : MonoBehaviour
             {
                 elevatorObject.transform.Translate(0, -elevatorSpeed, 0);
             }
+
+            cameraPan.panToObject = false;
+            pan = true;
         }
     }
 
@@ -82,6 +98,12 @@ public class PressurePadScript : MonoBehaviour
                 rotationObject.transform.Rotate(0, 0, rotationSpeed);
                 rotationAmount -= rotationSpeed;
             }
+
+            if (pan)
+            {
+                cameraPan.objectPan = rotationObject;
+                cameraPan.panToObject = true;
+            }
         }
         else
         {
@@ -97,6 +119,10 @@ public class PressurePadScript : MonoBehaviour
                 rotationObject.transform.Rotate(0, 0, -rotationSpeed);
                 rotationAmount += rotationSpeed;
             }
+
+
+            cameraPan.panToObject = false;
+            pan = true;
         }
     }
 
@@ -105,6 +131,9 @@ public class PressurePadScript : MonoBehaviour
         //makes sure its the zombie and not the ghost
         if (collision.tag == "zombie")
         {
+            //activate the camera pan script
+            gameObject.GetComponent<CameraPan>().enabled = true;
+
             //give the zombie a chance to be on the platform before the pad changes
             activateTimer += 3 * Time.deltaTime;
 
@@ -121,6 +150,8 @@ public class PressurePadScript : MonoBehaviour
         //makes sure its the zombie and not the ghost
         if (collision.tag == "zombie")
         {
+            //deactivate the camera pan script
+            gameObject.GetComponent<CameraPan>().enabled = false;
             //zombie has left the pad so play the animation 
             anim.SetBool("Pressed", false);
             //reset the timer for the next time the zombie is on the platform 

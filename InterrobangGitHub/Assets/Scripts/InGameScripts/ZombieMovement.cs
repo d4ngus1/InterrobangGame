@@ -17,6 +17,7 @@ public class ZombieMovement : MonoBehaviour
     public float moveSpeed = 5f;
     [Range(0, 5)]
     public float waitTimeForPlatformToCrumble = 1;
+    public float timeToStopStompAnimation;
     [Range(0, 5)]
     public float waitTimeForDoorToTakeDamage = 1;
     [Range(0, 2)]
@@ -67,6 +68,8 @@ public class ZombieMovement : MonoBehaviour
     {
         //stops the ghost and the zombie from colliding with each other 
         Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ghost.GetComponent<Collider2D>(), true);
+
+        
 
         //when the zombie is being controlled 
         if (active == true)
@@ -127,31 +130,42 @@ public class ZombieMovement : MonoBehaviour
 
     void movementLeftRightUpdate()
     {
-        //sets where the screen is touched to the zombie movement 
-        if (Input.GetMouseButton(0))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Stomp") || anim.GetCurrentAnimatorStateInfo(0).IsName("StompLeft"))
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            direction = (mousePos - transform.position).normalized;
+            //stops the zombie from being able to move during the stomp animations 
+            Vector2 freezeXVelocity;
+            freezeXVelocity.x = 0;
+            freezeXVelocity.y = rb.velocity.y;
+            rb.velocity = freezeXVelocity;
         }
-        else direction = Vector2.zero;
-
-        //passes the zombie movement to the animator to play the right animation 
-        anim.SetFloat("speed", direction.x);
-
-
-        //set the velocity of the rigid body to the direction of the mouse
-        finalMovement.x = direction.x * moveSpeed;
-        finalMovement.y = rb.velocity.y;
-
-        //if not on ladder then set the velocity 
-        if (onLadder == false)
+        else
         {
-            rb.velocity = finalMovement;
-        }
+            //sets where the screen is touched to the zombie movement 
+            if (Input.GetMouseButton(0))
+            {
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                direction = (mousePos - transform.position).normalized;
+            }
+            else direction = Vector2.zero;
 
-        if (onLadder)
-        {
-            rb.velocity = Vector2.zero;
+            //passes the zombie movement to the animator to play the right animation 
+            anim.SetFloat("speed", direction.x);
+
+
+            //set the velocity of the rigid body to the direction of the mouse
+            finalMovement.x = direction.x * moveSpeed;
+            finalMovement.y = rb.velocity.y;
+
+            //if not on ladder then set the velocity 
+            if (onLadder == false)
+            {
+                rb.velocity = finalMovement;
+            }
+
+            if (onLadder)
+            {
+                rb.velocity = Vector2.zero;
+            }
         }
     }
 
@@ -193,7 +207,7 @@ public class ZombieMovement : MonoBehaviour
         }
 
         //zombie has finished stomping
-        if (stompCounter >= 1)
+        if (stompCounter >= timeToStopStompAnimation)
         {
             //reset all vars back to their original state
             isZombieStomping = false;
