@@ -25,7 +25,7 @@ public class CameraPan : MonoBehaviour
     {
         if (panToObject)
         {
-            cameraSwitch(objectPan.transform);
+            StartCoroutine(timeBeforePan());
             StartCorotine();
         }
         else
@@ -38,6 +38,12 @@ public class CameraPan : MonoBehaviour
     public void StartCorotine()
     {
         StartCoroutine(waitTime());
+    }
+
+    IEnumerator timeBeforePan()
+    {
+        yield return new WaitForSeconds(0.5f);
+        cameraSwitch(objectPan.transform);
     }
 
     IEnumerator waitTime()

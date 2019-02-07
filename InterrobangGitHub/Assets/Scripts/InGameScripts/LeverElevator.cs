@@ -9,7 +9,6 @@ public class LeverElevator : MonoBehaviour
     Animator anim;
     float animTimer;
     float turnGhostOff = 1;
-    public GameObject highlight;
     public GameObject elevatorObject;
     [Range(-10, 10)]
     public float maxHeight = 0f;
@@ -42,7 +41,7 @@ public class LeverElevator : MonoBehaviour
         particle = gameObject.GetComponent<ParticleSystem>();
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
         particle.enableEmission = false;
-        highlight.SetActive(false);
+       
 
         //set up the max height of the elevator
         initialHeight = elevatorObject.transform.localPosition.y;
@@ -57,7 +56,8 @@ public class LeverElevator : MonoBehaviour
         if (collision.tag == "ghost")
         {
             ghostIsInside = true;
-            highlight.SetActive(true);
+            anim.SetBool("Interactable", true);
+            
             gameObject.GetComponent<CameraPan>().enabled = true;
         }
     }
@@ -68,9 +68,8 @@ public class LeverElevator : MonoBehaviour
         if (collision.tag == "ghost")
         {
             ghostIsInside = false;
-            //allows the player to know when it can be interacted with 
-            highlight.SetActive(false);
-
+            
+            anim.SetBool("Interactable", false);
             gameObject.GetComponent<CameraPan>().enabled = false;
         }
     }
@@ -93,7 +92,7 @@ public class LeverElevator : MonoBehaviour
                     elevatorUpdate = true;
                     animTimer = 0;
                     anim.SetBool("leverState", true);
-                    highlight.SetActive(false);
+                    
                 }
             }
             else
@@ -108,8 +107,7 @@ public class LeverElevator : MonoBehaviour
             ElevatorUpdateOff();
         }
 
-        //keeps the highlight behind the lever
-        highlight.gameObject.transform.rotation = gameObject.transform.rotation;
+       
 
         if (runTimer == true)
         {
@@ -157,18 +155,27 @@ public class LeverElevator : MonoBehaviour
 
     private void ElevatorUpdateOn()
     {
-        //moves the platform up 
-        if (elevatorObject.transform.localPosition.y < maxHeight)
-        {
-            elevatorObject.transform.Translate(0, elevatorSpeed, 0);
-        }
-        
+        StartCoroutine(wait());   
+
+    }
+
+    IEnumerator wait()
+    {
         if (pan)
         {
             cameraPan.objectPan = elevatorObject;
             cameraPan.panToObject = true;
         }
 
+        yield return new WaitForSeconds(1);
+
+        //moves the platform up 
+        if (elevatorObject.transform.localPosition.y < maxHeight)
+        {
+            elevatorObject.transform.Translate(0, elevatorSpeed, 0);
+        }
+
+        
     }
 
     private void ElevatorUpdateOff()
