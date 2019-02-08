@@ -5,7 +5,6 @@ public class LeverRotation : MonoBehaviour
 {
     CameraPan cameraPan;
     GameObject ghost;
-    public GameObject highlight;
     public GameObject rotationObject;
     bool ghostIsInside = false;
     bool isLeverOn = false;
@@ -48,7 +47,7 @@ public class LeverRotation : MonoBehaviour
         particle = gameObject.GetComponent<ParticleSystem>();
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
         particle.enableEmission = false;
-        highlight.SetActive(false);
+      
 
         //stores the initial rotation so it can be set back to it 
         initialRotation = rotationObject.GetComponent<Transform>().eulerAngles.z;
@@ -67,8 +66,9 @@ public class LeverRotation : MonoBehaviour
         if (collision.tag == "ghost")
         {
             ghostIsInside = true;
-            highlight.SetActive(true);
+          
             gameObject.GetComponent<CameraPan>().enabled = true;
+            anim.SetBool("Interactable", true);
         }
 
 
@@ -81,8 +81,9 @@ public class LeverRotation : MonoBehaviour
         {
             ghostIsInside = false;
             //allows the player to know when it can be interacted with 
-            highlight.SetActive(false);
+         
             gameObject.GetComponent<CameraPan>().enabled = false;
+            anim.SetBool("Interactable", false);
         }
 
 
@@ -106,7 +107,7 @@ public class LeverRotation : MonoBehaviour
                     rotationUpdate = true;
                     animTimer = 0;
                     anim.SetBool("leverState", true);
-                    highlight.SetActive(false);
+                  
                 }
             }
             else
@@ -137,8 +138,6 @@ public class LeverRotation : MonoBehaviour
             ghost.transform.position = ghostPosWhenLeverOn;
         }
 
-        //keeps the highlight behind the lever
-        highlight.gameObject.transform.rotation = gameObject.transform.rotation;
     }
 
     private void OnMouseDown()
@@ -172,8 +171,16 @@ public class LeverRotation : MonoBehaviour
         }
     }
 
-    private void RotationUpdateOn()
+    IEnumerator wait()
     {
+        if (pan)
+        {
+            cameraPan.objectPan = rotationObject;
+            cameraPan.panToObject = true;
+        }
+
+        yield return new WaitForSeconds(cameraPan.timeBeforePanToObject);
+
         if (rotateLeft && rotationAmount > 0)
         {
             rotationObject.transform.Rotate(0, 0, -rotationSpeed);
@@ -185,12 +192,10 @@ public class LeverRotation : MonoBehaviour
             rotationObject.transform.Rotate(0, 0, rotationSpeed);
             rotationAmount -= rotationSpeed;
         }
-
-        if (pan)
-        {
-            cameraPan.objectPan = rotationObject;
-            cameraPan.panToObject = true;
-        }
+    }
+    private void RotationUpdateOn()
+    {
+        StartCoroutine(wait());      
     }
 
     private void RotationUpdateOff()

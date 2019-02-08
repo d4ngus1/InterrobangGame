@@ -5,6 +5,7 @@ public class LeverElevator : MonoBehaviour
 {
     CameraPan cameraPan;
     GameObject ghost;
+    ZombieMovement zombie;
     Animator ghostAnim;
     Animator anim;
     float animTimer;
@@ -32,6 +33,7 @@ public class LeverElevator : MonoBehaviour
     {
         //set up the ghost game object
         ghost = GameObject.FindGameObjectWithTag("ghost");
+        zombie = GameObject.FindObjectOfType<ZombieMovement>();
         ghostAnim = ghost.GetComponent<Animator>();
 
         //set up the animator for the lever state
@@ -155,8 +157,7 @@ public class LeverElevator : MonoBehaviour
 
     private void ElevatorUpdateOn()
     {
-        StartCoroutine(wait());   
-
+        StartCoroutine(wait());
     }
 
     IEnumerator wait()
@@ -167,7 +168,7 @@ public class LeverElevator : MonoBehaviour
             cameraPan.panToObject = true;
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(cameraPan.timeBeforePanToObject);
 
         //moves the platform up 
         if (elevatorObject.transform.localPosition.y < maxHeight)

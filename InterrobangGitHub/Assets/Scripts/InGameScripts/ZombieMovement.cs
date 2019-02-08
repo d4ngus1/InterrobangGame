@@ -69,8 +69,6 @@ public class ZombieMovement : MonoBehaviour
         //stops the ghost and the zombie from colliding with each other 
         Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ghost.GetComponent<Collider2D>(), true);
 
-        
-
         //when the zombie is being controlled 
         if (active == true)
         {

@@ -5,51 +5,64 @@ public class CameraPan : MonoBehaviour
 {
     [HideInInspector]
     public GameObject objectPan;
+    [HideInInspector]
     public bool panToObject;
+    public float timeBeforePanToObject = 0.5f;
     public float timeToSwitchBackToCamera;
     Vector3 currentPosition, finishedPosition;
     CameraFollowPlayer cameraFollowPlayer;
 
+    private bool beingHandled;
+    bool followObject;
     
     // Use this for initialization
     void Start()
     {
         //mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         cameraFollowPlayer = GameObject.FindObjectOfType<CameraFollowPlayer>();
-        
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (panToObject)
+        if (panToObject && !beingHandled)
         {
-            StartCoroutine(timeBeforePan());
-            StartCorotine();
+            StartCores();
         }
-        else
+
+        if (panToObject == false)
         {
             cameraFollowPlayer.lockedToPlayers = true;
         }
-        
-    }
 
-    public void StartCorotine()
-    {
-        StartCoroutine(waitTime());
+        if(followObject)
+        {
+            cameraSwitch(objectPan.transform);
+        }
     }
 
     IEnumerator timeBeforePan()
     {
-        yield return new WaitForSeconds(0.5f);
-        cameraSwitch(objectPan.transform);
+        yield return new WaitForSeconds(timeBeforePanToObject);
+        followObject = true;
+        StartCoroutine(waitTime());
+    }
+
+    public void StartCores()
+    {
+        StartCoroutine(timeBeforePan());      
     }
 
     IEnumerator waitTime()
     {
+        beingHandled = true;
+
         yield return new WaitForSeconds(timeToSwitchBackToCamera);
+
         panToObject = false;
+        followObject = false;
 
         //all elevators
         var elevator = GameObject.FindObjectsOfType<LeverElevator>();
@@ -71,7 +84,8 @@ public class CameraPan : MonoBehaviour
         {
             pressurePads[i].pan = false;
         }
-
+        beingHandled = false;
+        //cameraFollowPlayer.enabled = true;
     }
 
     public void cameraSwitch(Transform objectTransform)
