@@ -11,6 +11,7 @@ public class LeverElevator : MonoBehaviour
     float animTimer;
     float turnGhostOff = 1;
     public GameObject elevatorObject;
+    public GameObject elevatorStopper;
     [Range(-10, 10)]
     public float maxHeight = 0f;
     float initialHeight;
@@ -171,7 +172,7 @@ public class LeverElevator : MonoBehaviour
         yield return new WaitForSeconds(cameraPan.timeBeforePanToObject);
 
         //moves the platform up 
-        if (elevatorObject.transform.localPosition.y < maxHeight)
+        if (elevatorObject.transform.localPosition.y < elevatorStopper.transform.localPosition.y)
         {
             elevatorObject.transform.Translate(0, elevatorSpeed, 0);
         }
