@@ -55,12 +55,14 @@ public class ZombieMovement : MonoBehaviour
     float meleeAdder = 1;
     int numOfDoors;
 
+    SwitchingCharacters switchingCharacters;
 
     private void Start()
     {
         //sets up the animation we want
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        switchingCharacters = GameObject.FindObjectOfType<SwitchingCharacters>();
     }
 
     // Update is called once per frame
@@ -70,7 +72,7 @@ public class ZombieMovement : MonoBehaviour
         Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ghost.GetComponent<Collider2D>(), true);
 
         //when the zombie is being controlled 
-        if (active == true)
+        if (active == true && switchingCharacters.charactersCanMove)
         {
             //moves the zombie left and right 
             movementLeftRightUpdate();
@@ -80,7 +82,7 @@ public class ZombieMovement : MonoBehaviour
 
             //zombie melee ability 
             meleeUpdate();
-            
+
             //ladders
             if (onLadder)
             {
@@ -107,6 +109,12 @@ public class ZombieMovement : MonoBehaviour
         {
             //stop the zombie from playing the wrong animation when switching characters 
             anim.SetFloat("speed", 0f);
+
+            //stops the animation speed playing when the ghost is selected and the zombie is on a ladder
+            if (anim.GetCurrentAnimatorStateInfo(1).IsName("Climbing"))
+            {
+                anim.speed = 0;
+            }
         }
 
         if(ghostFollowZombie)

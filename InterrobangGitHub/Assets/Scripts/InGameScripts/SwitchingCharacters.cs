@@ -16,6 +16,8 @@ public class SwitchingCharacters : MonoBehaviour
 
     [HideInInspector]
     public int amountOfCharacterSwitches;
+    [HideInInspector]
+    public bool charactersCanMove;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class SwitchingCharacters : MonoBehaviour
     private void Start()
     {
         zombieMovement.active = true;
+        charactersCanMove = true;
     }
 
     // Update is called once per frame
@@ -65,6 +68,17 @@ public class SwitchingCharacters : MonoBehaviour
             //stompButton.GetComponent<Animator>().SetBool("zombieActive", false);
             //meleeButton.GetComponent<Animator>().SetBool("zombieActive", false);
         }
-        
+
+    }
+
+    //functions for the event trigger to stop the characters being able to move when the button is being held
+    public void StopMovement()
+    {
+        charactersCanMove = false;
+    }
+
+    public void ResumeMovement()
+    {
+        charactersCanMove = true;
     }
 }

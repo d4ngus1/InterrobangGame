@@ -22,6 +22,9 @@ public class PressurePadScript : MonoBehaviour
     [HideInInspector]
     public bool pan;
 
+    ZombieMovement zombie;
+    bool padDown;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -29,6 +32,7 @@ public class PressurePadScript : MonoBehaviour
         gameObject.GetComponent<CameraPan>().enabled = false;
         storedRotation = rotationAmount;
         storedHeight = elevatorObject.GetComponent<Transform>().localPosition.y;
+        zombie = GameObject.FindObjectOfType<ZombieMovement>();
     }
 
     void Update()
@@ -51,6 +55,8 @@ public class PressurePadScript : MonoBehaviour
         {
             ElevatorUpdate();
         }
+
+       
     }
 
     private void ElevatorUpdate()
@@ -65,6 +71,7 @@ public class PressurePadScript : MonoBehaviour
 
             if (pan)
             {
+                padDown = true;
                 cameraPan.objectPan = elevatorObject;
                 cameraPan.panToObject = true;
             }
@@ -77,6 +84,7 @@ public class PressurePadScript : MonoBehaviour
                 elevatorObject.transform.Translate(0, -elevatorSpeed, 0);
             }
 
+            padDown = false;
             cameraPan.panToObject = false;
             pan = true;
         }
@@ -101,6 +109,7 @@ public class PressurePadScript : MonoBehaviour
 
             if (pan)
             {
+                padDown = true;
                 cameraPan.objectPan = rotationObject;
                 cameraPan.panToObject = true;
             }
@@ -120,7 +129,7 @@ public class PressurePadScript : MonoBehaviour
                 rotationAmount += rotationSpeed;
             }
 
-
+            padDown = false;
             cameraPan.panToObject = false;
             pan = true;
         }
@@ -141,6 +150,11 @@ public class PressurePadScript : MonoBehaviour
             {
                 //zombie is now on the pad so play the animation 
                 anim.SetBool("Pressed", true);
+            }
+
+            if(pan && padDown)
+            {
+                zombie.active = false;
             }
         }
     }

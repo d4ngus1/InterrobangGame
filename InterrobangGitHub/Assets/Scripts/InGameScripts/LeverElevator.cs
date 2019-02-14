@@ -44,13 +44,15 @@ public class LeverElevator : MonoBehaviour
         particle = gameObject.GetComponent<ParticleSystem>();
         characters = GameObject.FindObjectOfType<SwitchingCharacters>();
         particle.enableEmission = false;
-       
+
 
         //set up the max height of the elevator
         initialHeight = elevatorObject.transform.localPosition.y;
 
         cameraPan = gameObject.GetComponent<CameraPan>();
         gameObject.GetComponent<CameraPan>().enabled = false;
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
