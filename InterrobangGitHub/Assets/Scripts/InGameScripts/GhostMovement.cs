@@ -26,6 +26,7 @@ public class GhostMovement : MonoBehaviour
     private Vector3 mousePosition;
     private Rigidbody2D rb;
     private Vector2 direction;
+    private SwitchingCharacters switchingCharacters;
     float move;
 
     private void Start()
@@ -33,12 +34,13 @@ public class GhostMovement : MonoBehaviour
         //sets up the animation we want for the ghost
         anim = GetComponent<Animator>();
         freeCam = GameObject.FindGameObjectWithTag("MainCamera");
+        switchingCharacters = GameObject.FindObjectOfType<SwitchingCharacters>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active)
+        if (active && switchingCharacters.charactersCanMove)
         {
                 if (Input.GetMouseButton(0))
                 {

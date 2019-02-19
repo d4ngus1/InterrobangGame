@@ -7,10 +7,14 @@ public class CameraPan : MonoBehaviour
     public GameObject objectPan;
     [HideInInspector]
     public bool panToObject;
+    public bool panToZombie = false;
     public float timeBeforePanToObject = 0.5f;
     public float timeToSwitchBackToCamera;
     Vector3 currentPosition, finishedPosition;
     CameraFollowPlayer cameraFollowPlayer;
+    SwitchingCharacters switchingCharacters;
+    ZombieMovement zombie;
+    GhostMovement ghost;
 
     private bool beingHandled;
     bool followObject;
@@ -20,8 +24,9 @@ public class CameraPan : MonoBehaviour
     {
         //mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         cameraFollowPlayer = GameObject.FindObjectOfType<CameraFollowPlayer>();
-
-        
+        switchingCharacters = GameObject.FindObjectOfType<SwitchingCharacters>();
+        zombie = GameObject.FindObjectOfType<ZombieMovement>();
+        ghost = GameObject.FindObjectOfType<GhostMovement>();
     }
 
     // Update is called once per frame
@@ -85,7 +90,25 @@ public class CameraPan : MonoBehaviour
             pressurePads[i].pan = false;
         }
         beingHandled = false;
-        //cameraFollowPlayer.enabled = true;
+
+        //allows the option to pan to the zombie or to the ghost 
+        if (panToZombie)
+        {
+            //allows the camera to pan back to the zombie after the possession pan 
+            cameraFollowPlayer.zombieActivated = true;
+            switchingCharacters.counter = 1;
+            zombie.active = true;
+            ghost.active = false;
+        }
+
+        if (!panToZombie)
+        {
+            //allows the camera to pan back to the zombie after the possession pan 
+            cameraFollowPlayer.zombieActivated = false;
+            switchingCharacters.counter = 2;
+            ghost.active = true;
+            zombie.active = false;
+        }
     }
 
     public void cameraSwitch(Transform objectTransform)
