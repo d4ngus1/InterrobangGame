@@ -31,7 +31,10 @@ public class PressurePadScript : MonoBehaviour
         cameraPan = gameObject.GetComponent<CameraPan>();
         gameObject.GetComponent<CameraPan>().enabled = false;
         storedRotation = rotationAmount;
-        storedHeight = elevatorObject.GetComponent<Transform>().localPosition.y;
+        if (elevatorPad)
+        {
+            storedHeight = elevatorObject.GetComponent<Transform>().localPosition.y;
+        }
         zombie = GameObject.FindObjectOfType<ZombieMovement>();
     }
 

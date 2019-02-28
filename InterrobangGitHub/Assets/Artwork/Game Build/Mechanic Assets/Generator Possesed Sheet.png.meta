@@ -1,0 +1,504 @@
+fileFormatVersion: 2
+guid: 40ec5742edc7f8e4b942bc95133f0919
+timeCreated: 1551355953
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Generator Possesed Sheet_0
+    21300002: Generator Possesed Sheet_1
+    21300004: Generator Possesed Sheet_2
+    21300006: Generator Possesed Sheet_3
+    21300008: Generator Possesed Sheet_4
+    21300010: Generator Possesed Sheet_5
+    21300012: Generator Possesed Sheet_6
+    21300014: Generator Possesed Sheet_7
+    21300016: Generator Possesed Sheet_8
+    21300018: Generator Possesed Sheet_9
+    21300020: Generator Possesed Sheet_10
+    21300022: Generator Possesed Sheet_11
+    21300024: Generator Possesed Sheet_12
+    21300026: Generator Possesed Sheet_13
+    21300028: Generator Possesed Sheet_14
+    21300030: Generator Possesed Sheet_15
+    21300032: Generator Possesed Sheet_16
+    21300034: Generator Possesed Sheet_17
+    21300036: Generator Possesed Sheet_18
+    21300038: Generator Possesed Sheet_19
+    21300040: Generator Possesed Sheet_20
+    21300042: Generator Possesed Sheet_21
+    21300044: Generator Possesed Sheet_22
+    21300046: Generator Possesed Sheet_23
+    21300048: Generator Possesed Sheet_24
+    21300050: Generator Possesed Sheet_25
+    21300052: Generator Possesed Sheet_26
+    21300054: Generator Possesed Sheet_27
+    21300056: Generator Possesed Sheet_28
+    21300058: Generator Possesed Sheet_29
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 760
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 760
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 760
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 760
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 608
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 608
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 608
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 608
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 456
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 456
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 456
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 456
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 304
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 304
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 304
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 304
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 152
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 152
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 152
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 152
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 0
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Generator Possesed Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 127
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -102,7 +102,7 @@ public class LeverRotation : MonoBehaviour
                 {
                     particle.enableEmission = true;
                     ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
-                    ghost.SetActive(false);
+                    //ghost.SetActive(false);
                     runTimer = false;
                     rotationUpdate = true;
                     animTimer = 0;
@@ -113,7 +113,7 @@ public class LeverRotation : MonoBehaviour
             else
             {
                 ghost.GetComponent<SpriteRenderer>().sortingOrder = 10;
-                ghost.SetActive(true);
+                //ghost.SetActive(true);
             }
         }
 
@@ -161,7 +161,7 @@ public class LeverRotation : MonoBehaviour
             }
 
             //if the lever is pressed again it is off so rotate back and turn the emission off 
-            if (clickCounter == 2 && characters.counter == 2 && ghost.activeInHierarchy == false)
+            if (clickCounter == 2 && characters.counter == 2)
             {
                 ghostAnim.SetBool("possess", false);
                 particle.enableEmission = false;

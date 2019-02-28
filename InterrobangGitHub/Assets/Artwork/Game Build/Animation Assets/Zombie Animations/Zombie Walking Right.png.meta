@@ -1,0 +1,504 @@
+fileFormatVersion: 2
+guid: c126dc34e87288448b584c3dc1b09a54
+timeCreated: 1551304662
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Zombie Walking Right_0
+    21300002: Zombie Walking Right_1
+    21300004: Zombie Walking Right_2
+    21300006: Zombie Walking Right_3
+    21300008: Zombie Walking Right_4
+    21300010: Zombie Walking Right_5
+    21300012: Zombie Walking Right_6
+    21300014: Zombie Walking Right_7
+    21300016: Zombie Walking Right_8
+    21300018: Zombie Walking Right_9
+    21300020: Zombie Walking Right_10
+    21300022: Zombie Walking Right_11
+    21300024: Zombie Walking Right_12
+    21300026: Zombie Walking Right_13
+    21300028: Zombie Walking Right_14
+    21300030: Zombie Walking Right_15
+    21300032: Zombie Walking Right_16
+    21300034: Zombie Walking Right_17
+    21300036: Zombie Walking Right_18
+    21300038: Zombie Walking Right_19
+    21300040: Zombie Walking Right_20
+    21300042: Zombie Walking Right_21
+    21300044: Zombie Walking Right_22
+    21300046: Zombie Walking Right_23
+    21300048: Zombie Walking Right_24
+    21300050: Zombie Walking Right_25
+    21300052: Zombie Walking Right_26
+    21300054: Zombie Walking Right_27
+    21300056: Zombie Walking Right_28
+    21300058: Zombie Walking Right_29
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zombie Walking Right_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4212
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 4212
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_2
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 4212
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_3
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 4212
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_4
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 4212
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_5
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 4212
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3159
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_7
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 3159
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_8
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 3159
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_9
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 3159
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_10
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 3159
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_11
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 3159
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2106
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_13
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 2106
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_14
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 2106
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_15
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 2106
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_16
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 2106
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_17
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 2106
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1053
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_19
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1053
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_20
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1053
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_21
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 1053
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_22
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 1053
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_23
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 1053
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_25
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 0
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_26
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 0
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_27
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 0
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_28
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 0
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Zombie Walking Right_29
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 0
+        width: 589
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

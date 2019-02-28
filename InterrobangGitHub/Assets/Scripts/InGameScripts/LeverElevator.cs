@@ -92,7 +92,7 @@ public class LeverElevator : MonoBehaviour
                 {
                     particle.enableEmission = true;
                     ghost.GetComponent<SpriteRenderer>().sortingOrder = -5;
-                    ghost.SetActive(false);
+                    //ghost.SetActive(false);
                     runTimer = false;
                     elevatorUpdate = true;
                     animTimer = 0;
@@ -103,7 +103,7 @@ public class LeverElevator : MonoBehaviour
             else
             {
                 ghost.GetComponent<SpriteRenderer>().sortingOrder = 10;
-                ghost.SetActive(true);
+                //ghost.SetActive(true);
             }
         }
 
@@ -130,6 +130,7 @@ public class LeverElevator : MonoBehaviour
         //as long as the ghost is inside the area then the lever can be activated
         if (ghostIsInside == true && characters.counter == 2)
         {
+            ghost.GetComponent<Animator>().SetFloat("gSpeed", 0);
             clickCounter++;
 
             //reset the counter 
@@ -146,7 +147,7 @@ public class LeverElevator : MonoBehaviour
             }
 
             //if the lever is pressed again it is off so rotate back and turn the emission off 
-            if (clickCounter == 2 && characters.counter == 2 && ghost.activeInHierarchy == false)
+            if (clickCounter == 2 && characters.counter == 2)
             {
                 ghostAnim.SetBool("possess", false);
                 elevatorUpdate = false;

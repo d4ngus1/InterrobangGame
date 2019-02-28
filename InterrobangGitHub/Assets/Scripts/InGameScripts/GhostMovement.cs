@@ -22,7 +22,7 @@ public class GhostMovement : MonoBehaviour
     float dirX, dirY;
     [Range(1f, 20f)]
 
-
+    bool dontMove;
     private Vector3 mousePosition;
     private Rigidbody2D rb;
     private Vector2 direction;
@@ -38,26 +38,27 @@ public class GhostMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (active && switchingCharacters.charactersCanMove)
         {
-                if (Input.GetMouseButton(0))
-                {
-                    //store the variable to be used in the animator to see whether 
-                    //the ghost is moving to the left or to the right
-                    move = direction.x;
-                    mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    direction = (mousePosition - transform.position).normalized;
-                    transform.position = new Vector2(transform.position.x + direction.x * movementSpeed * Time.deltaTime, transform.position.y + direction.y * movementSpeed * Time.deltaTime);
-                }
-                else move = 0;
+            if (Input.GetMouseButton(0))
+            {
+                //store the variable to be used in the animator to see whether 
+                //the ghost is moving to the left or to the right
+                
+                mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                direction = (mousePosition - transform.position).normalized;
+                move = direction.x;
+                transform.position = new Vector2(transform.position.x + direction.x * movementSpeed * Time.deltaTime, transform.position.y + direction.y * movementSpeed * Time.deltaTime);
+            }
+            else move = 0;
 
-                //sends the data from the player to the condition in the animation to allow it to change transitions 
-                anim.SetFloat("gSpeed", move);
+            //sends the data from the player to the condition in the animation to allow it to change transitions 
+            anim.SetFloat("gSpeed", move);
 
-                transform.eulerAngles = new Vector2(0, -360);
-            
+            transform.eulerAngles = new Vector2(0, -360);
+
         }
         else
         {
@@ -68,4 +69,5 @@ public class GhostMovement : MonoBehaviour
         //changes the animation speed
         anim.speed = animationSpeed;
     }
+
 }
