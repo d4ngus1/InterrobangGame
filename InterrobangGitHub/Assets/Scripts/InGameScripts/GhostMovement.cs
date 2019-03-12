@@ -44,7 +44,7 @@ public class GhostMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         if (active && switchingCharacters.charactersCanMove)
         {
@@ -83,9 +83,10 @@ public class GhostMovement : MonoBehaviour
                     floatOfGhost = new Vector4(0, 0, 0, 1);
                 }
             }
-            else 
+            else
             {
                 move = 0;
+                direction = Vector2.zero;
 
                 //top right
                 if (floatOfGhost.x > 0)
@@ -110,7 +111,7 @@ public class GhostMovement : MonoBehaviour
                         floatyness.y = 0;
                     }
 
-                    if(floatyness.x == 0 && floatyness.y == 0)
+                    if (floatyness.x == 0 && floatyness.y == 0)
                     {
                         floatOfGhost.x = 0;
                     }
@@ -211,7 +212,8 @@ public class GhostMovement : MonoBehaviour
             //sends the data from the player to the condition in the animation to allow it to change transitions 
             anim.SetFloat("gSpeed", move);
 
-            transform.eulerAngles = new Vector2(0, -360);
+            
+            // transform.eulerAngles = new Vector2(0, -360);
 
         }
         else
