@@ -69,7 +69,7 @@ public class PressurePadScript : MonoBehaviour
             //moves the platform up when the platform has been pressed
             if (elevatorObject.transform.localPosition.y < elevatorHeight)
             {
-                elevatorObject.transform.Translate(0, elevatorSpeed, 0);
+                elevatorObject.transform.Translate(0, elevatorSpeed * Time.deltaTime, 0);
             }
 
             if (pan)
@@ -84,7 +84,7 @@ public class PressurePadScript : MonoBehaviour
             //returns the platform back to the original position 
             if (elevatorObject.transform.localPosition.y > storedHeight)
             {
-                elevatorObject.transform.Translate(0, -elevatorSpeed, 0);
+                elevatorObject.transform.Translate(0, -elevatorSpeed * Time.deltaTime, 0);
             }
 
             padDown = false;
@@ -100,14 +100,14 @@ public class PressurePadScript : MonoBehaviour
             //starts the rotation when the pad has been pressed
             if (rotateLeft && rotationAmount > 0)
             {
-                rotationObject.transform.Rotate(0, 0, -rotationSpeed);
-                rotationAmount -= rotationSpeed;
+                rotationObject.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+                rotationAmount -= rotationSpeed * Time.deltaTime;
             }
 
             if (!rotateLeft && rotationAmount > 0)
             {
-                rotationObject.transform.Rotate(0, 0, rotationSpeed);
-                rotationAmount -= rotationSpeed;
+                rotationObject.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+                rotationAmount -= rotationSpeed * Time.deltaTime;
             }
 
             if (pan)
@@ -122,14 +122,14 @@ public class PressurePadScript : MonoBehaviour
             //when the pad hasnt been pressed rotates back to original position
             if (rotateLeft && rotationAmount < storedRotation)
             {
-                rotationObject.transform.Rotate(0, 0, rotationSpeed);
-                rotationAmount += rotationSpeed;
+                rotationObject.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+                rotationAmount += rotationSpeed * Time.deltaTime;
             }
 
             if (!rotateLeft && rotationAmount < storedRotation)
             {
-                rotationObject.transform.Rotate(0, 0, -rotationSpeed);
-                rotationAmount += rotationSpeed;
+                rotationObject.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+                rotationAmount += rotationSpeed * Time.deltaTime;
             }
 
             padDown = false;

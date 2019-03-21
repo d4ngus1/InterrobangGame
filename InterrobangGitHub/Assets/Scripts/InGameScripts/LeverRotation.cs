@@ -15,7 +15,7 @@ public class LeverRotation : MonoBehaviour
     //rotation vars
     public float rotationAmount = 90;
     public bool rotateLeft = true;
-    [Range (0,1)]
+    [Range (0,100)]
     public float rotationSpeed = 0.5f;
     //the amount of rotation needed for the object 
     float initialRotation;
@@ -183,14 +183,14 @@ public class LeverRotation : MonoBehaviour
 
         if (rotateLeft && rotationAmount > 0)
         {
-            rotationObject.transform.Rotate(0, 0, -rotationSpeed);
-            rotationAmount -= rotationSpeed;
+            rotationObject.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            rotationAmount -= rotationSpeed * Time.deltaTime;
         }
 
         if (!rotateLeft && rotationAmount > 0)
         {
-            rotationObject.transform.Rotate(0, 0, rotationSpeed);
-            rotationAmount -= rotationSpeed;
+            rotationObject.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            rotationAmount -= rotationSpeed * Time.deltaTime;
         }
     }
     private void RotationUpdateOn()
@@ -205,14 +205,14 @@ public class LeverRotation : MonoBehaviour
 
         if (rotateLeft && rotationAmount < rotationSum)
         {
-            rotationObject.transform.Rotate(0, 0, rotationSpeed);
-            rotationAmount += rotationSpeed;
+            rotationObject.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            rotationAmount += rotationSpeed * Time.deltaTime;
         }
 
         if (!rotateLeft && rotationAmount < rotationSum)
         {
-            rotationObject.transform.Rotate(0, 0, -rotationSpeed);
-            rotationAmount += rotationSpeed;
+            rotationObject.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            rotationAmount += rotationSpeed * Time.deltaTime;
         }
     }
 }

@@ -15,7 +15,7 @@ public class LeverElevator : MonoBehaviour
     [Range(-10, 10)]
     public float maxHeight = 0f;
     float initialHeight;
-    [Range(0, 1)]
+    [Range(0, 5)]
     public float elevatorSpeed = 0.05f; 
     bool ghostIsInside = false;
     bool isLeverOn = false;
@@ -177,7 +177,7 @@ public class LeverElevator : MonoBehaviour
         //moves the platform up 
         if (elevatorObject.transform.localPosition.y < elevatorStopper.transform.localPosition.y)
         {
-            elevatorObject.transform.Translate(0, elevatorSpeed, 0);
+            elevatorObject.transform.Translate(0, elevatorSpeed * Time.deltaTime, 0);
         }
 
         
@@ -191,7 +191,7 @@ public class LeverElevator : MonoBehaviour
 
         if (elevatorObject.transform.localPosition.y > initialHeight)
         {
-            elevatorObject.transform.Translate(0, -elevatorSpeed, 0);
+            elevatorObject.transform.Translate(0, -elevatorSpeed * Time.deltaTime, 0);
         }        
     }
 }
