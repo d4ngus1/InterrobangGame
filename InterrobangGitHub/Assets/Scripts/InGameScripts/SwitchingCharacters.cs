@@ -10,7 +10,7 @@ public class SwitchingCharacters : MonoBehaviour
     private ZombieMovement zombieMovement;
     private GhostMovement ghostMovement;
     private CameraFollowPlayer camera;
-    GameObject zombie;
+    GameObject zombie, ghost;
 
     public int counter = 1;
 
@@ -18,6 +18,9 @@ public class SwitchingCharacters : MonoBehaviour
     public int amountOfCharacterSwitches;
     [HideInInspector]
     public bool charactersCanMove;
+
+    //free cam stop function 
+    int counterF;
 
     private void Awake()
     {
@@ -27,6 +30,7 @@ public class SwitchingCharacters : MonoBehaviour
         stompButton = GameObject.FindGameObjectWithTag("stomp");
         meleeButton = GameObject.FindGameObjectWithTag("melee");
         zombie = GameObject.FindGameObjectWithTag("zombie");
+        ghost = GameObject.FindGameObjectWithTag("ghost");
     }
 
     private void Start()
@@ -35,6 +39,13 @@ public class SwitchingCharacters : MonoBehaviour
         charactersCanMove = true;
     }
 
+    private void Update()
+    {
+        if(charactersCanMove == false)
+        {
+            ghost.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+    }
     // Update is called once per frame
     void OnEnable()
     {
@@ -75,6 +86,22 @@ public class SwitchingCharacters : MonoBehaviour
     public void StopMovement()
     {
         charactersCanMove = false;
+    }
+
+    public void StopFreeCamMovement()
+    {
+        counterF++;
+
+        if (counterF > 1)
+        {
+            counterF = 0;
+        }
+
+        if (counterF == 0)
+        {
+            charactersCanMove = true;
+        }
+        else charactersCanMove = false;
     }
 
     public void ResumeMovement()

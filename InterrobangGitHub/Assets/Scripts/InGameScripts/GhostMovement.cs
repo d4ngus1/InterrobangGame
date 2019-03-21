@@ -31,7 +31,8 @@ public class GhostMovement : MonoBehaviour
     private SwitchingCharacters switchingCharacters;
     float move;
 
-    Vector2 floatyness;
+    [HideInInspector]
+    public Vector2 floatyness;
     Vector4 floatOfGhost;
 
     private void Start()
@@ -212,7 +213,6 @@ public class GhostMovement : MonoBehaviour
             //sends the data from the player to the condition in the animation to allow it to change transitions 
             anim.SetFloat("gSpeed", move);
 
-            
             // transform.eulerAngles = new Vector2(0, -360);
 
         }
