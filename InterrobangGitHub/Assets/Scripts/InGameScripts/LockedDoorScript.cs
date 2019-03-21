@@ -10,11 +10,7 @@ public class LockedDoorScript : MonoBehaviour
     void Update()
     {
         //if the key has been collected then turn off the collider to let the zombie through 
-        if (keyCollected)
-        {
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else
+        if (!keyCollected)
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
@@ -24,6 +20,7 @@ public class LockedDoorScript : MonoBehaviour
     {
         if(collision.tag == "zombie" && keyCollected == true)
         {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<Animator>().SetTrigger("Open");
         }
     }
