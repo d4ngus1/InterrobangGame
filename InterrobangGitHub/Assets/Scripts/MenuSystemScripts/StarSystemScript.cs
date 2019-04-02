@@ -15,6 +15,9 @@ public class StarSystemScript : MonoBehaviour
     public Text collectableStarText, currentCollectableText;
     public int goldCollectablesAmount, silverCollectablesAmount;
 
+    [HideInInspector]
+    public bool showStarSystem;
+
     float timeInSeconds;
     int amountOfCharacterSwitches, amountOfCollectables;
     Image timeStarImage, characterSwitchStarImage, collectableStarImage;
@@ -44,6 +47,17 @@ public class StarSystemScript : MonoBehaviour
         //gets the amount of collectables from the manager
         amountOfCollectables = GameObject.FindObjectOfType<CollectableStarManager>().totalNumberOfCollectables;
 
+        //when the collectable has been shown start the star system
+        if (showStarSystem)
+        {
+            //star for how quickly a level is complete
+            TimeStar();
+            //star for how many times the player has switched between the characters
+            CharacterSwitchStar();
+            //star for the amount of collectables the player has got
+            CollectableStar();
+        }
+
         Debug.Log(amountOfCharacterSwitches);
     }
 
@@ -51,15 +65,6 @@ public class StarSystemScript : MonoBehaviour
     {
         if (collision.tag == "zombie")
         {
-            starSystem.SetActive(true);
-
-            //star for how quickly a level is complete
-            TimeStar();
-            //star for how many times the player has switched between the characters
-            CharacterSwitchStar();
-            //star for the amount of collectables the player has got
-            CollectableStar();
-
             //sets the text to the current values to be shown to the player 
             currentTimeText.text = "Time Star" + "\nYour Time: " + timeInSeconds;
             currentSwitchText.text = "Character Switches Star" + "\nYour Character Switches: " + amountOfCharacterSwitches;

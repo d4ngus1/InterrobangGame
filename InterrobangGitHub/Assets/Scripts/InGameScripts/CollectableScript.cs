@@ -18,6 +18,10 @@ public class CollectableScript : MonoBehaviour
     public int placementInAnimator;
     public int totalAmountOfPieces;
 
+    public GameObject startSystemScreen;
+
+    private StarSystemScript starSystemScript;
+
     private void Start()
     {
         //sets the new transform to the position of the object
@@ -30,6 +34,8 @@ public class CollectableScript : MonoBehaviour
         anim = ImagePiece.GetComponent<Animator>();
         //set the collectable screen to not be visable
         fullCollectableScreen.SetActive(false);
+        //find the star system script
+        starSystemScript = GameObject.FindObjectOfType<StarSystemScript>();
     }
 
     void Update()
@@ -54,8 +60,12 @@ public class CollectableScript : MonoBehaviour
             //scale the collectable screen back down to zero
             fullCollectableScreen.transform.localScale = Vector3.zero;
 
+            //show the start screen before the gameobject is destroyed 
+            startSystemScreen.SetActive(true);
+            starSystemScript.showStarSystem = true;
+
             //get rid of the collectable now that its been collected
-            Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
         }
     }
 
