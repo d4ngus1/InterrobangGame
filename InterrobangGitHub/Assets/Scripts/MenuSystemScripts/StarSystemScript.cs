@@ -1,30 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
+using System.Diagnostics;
+using System.Threading;
+using Debug = UnityEngine.Debug;
+
 
 public class StarSystemScript : MonoBehaviour
 {
+	public Stopwatch timing;
     public Sprite bronzeStar, silverStar, goldStar;
     public GameObject starSystem, timeStar;
     public Text timeStarText, currentTimeText;
-    public float goldStarTime, silverStarTime;
+    public double goldStarTime, silverStarTime;
     public GameObject characterSwitchStar;
     public Text switchStarText, currentSwitchText;
     public int goldSwitches, silverSwitches;
     public GameObject collectableStar;
     public Text collectableStarText, currentCollectableText;
     public int goldCollectablesAmount, silverCollectablesAmount;
-
     [HideInInspector]
     public bool showStarSystem;
-
-    float timeInSeconds;
+    double timeInSeconds;
     int amountOfCharacterSwitches, amountOfCollectables;
     Image timeStarImage, characterSwitchStarImage, collectableStarImage;
 
     // Use this for initialization
     void Start()
     {
+		timing = new Stopwatch();
+		timing.Start();
         timeStarImage = timeStar.GetComponent<Image>();
         characterSwitchStarImage = characterSwitchStar.GetComponent<Image>();
         collectableStarImage = collectableStar.GetComponent<Image>();
@@ -36,11 +42,8 @@ public class StarSystemScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+	void Update()
     {
-        //converts the time into seconds
-        timeInSeconds += (Time.deltaTime) % 60;
-
         //gets the amount of character switches from the character switch script
         amountOfCharacterSwitches = GameObject.FindObjectOfType<SwitchingCharacters>().amountOfCharacterSwitches;
 
@@ -50,6 +53,7 @@ public class StarSystemScript : MonoBehaviour
         //when the collectable has been shown start the star system
         if (showStarSystem)
         {
+			timing.Stop();
             //star for how quickly a level is complete
             TimeStar();
             //star for how many times the player has switched between the characters
@@ -65,8 +69,9 @@ public class StarSystemScript : MonoBehaviour
     {
         if (collision.tag == "zombie")
         {
+
             //sets the text to the current values to be shown to the player 
-            currentTimeText.text = "Time Star" + "\nYour Time: " + timeInSeconds;
+			currentTimeText.text = "Time Star" + "\nYour Time: " + Math.Round(timing.Elapsed.TotalSeconds);
             currentSwitchText.text = "Character Switches Star" + "\nYour Character Switches: " + amountOfCharacterSwitches;
             currentCollectableText.text = "Collectables Star" + "\nCollectables Found: " + amountOfCollectables;
         }
@@ -74,6 +79,7 @@ public class StarSystemScript : MonoBehaviour
 
     private void TimeStar()
     {
+		timeInSeconds = timing.Elapsed.TotalSeconds;
         //checks the time against the stars and set the sprite to the correct star image
         if (timeInSeconds < goldStarTime)
         {
