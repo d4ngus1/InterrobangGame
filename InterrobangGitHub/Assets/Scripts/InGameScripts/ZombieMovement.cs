@@ -23,6 +23,7 @@ public class ZombieMovement : MonoBehaviour
     [Range(0, 2)]
     public float animationPlaySpeed = 1;
     public bool ghostFollowZombie;
+    public bool mainCharacter = false;
 
     float dirX, dirY;
     int numOfCrumblePlatforms;
@@ -72,48 +73,98 @@ public class ZombieMovement : MonoBehaviour
         Physics2D.IgnoreCollision(gameObject.GetComponent<CapsuleCollider2D>(), ghost.GetComponent<Collider2D>(), true);
 
         //when the zombie is being controlled 
-        if (active == true && switchingCharacters.charactersCanMove)
+        if (!mainCharacter)
         {
-            //moves the zombie left and right 
-            movementLeftRightUpdate();
-
-            //zombie stomp ability
-            stompUpdate();
-
-            //zombie melee ability 
-            meleeUpdate();
-
-            //ladders
-            if (onLadder)
+            if (active == true && switchingCharacters.charactersCanMove)
             {
-                //changes to the ladder weight
-                anim.SetLayerWeight(1, 1);
-                anim.speed = Mathf.Abs(direction.y * moveSpeed) + Mathf.Abs(direction.x * moveSpeed) / 2;
-                //add in the y axis
-                transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y + direction.y * moveSpeed * Time.deltaTime);
-                //no gravity for being on ladder
-                rb.gravityScale = 0;
+                //moves the zombie left and right 
+                movementLeftRightUpdate();
+
+                //zombie stomp ability
+                stompUpdate();
+
+                //zombie melee ability 
+                meleeUpdate();
+
+                //ladders
+                if (onLadder)
+                {
+                    //changes to the ladder weight
+                    anim.SetLayerWeight(1, 1);
+                    anim.speed = Mathf.Abs(direction.y * (moveSpeed / 2)) + Mathf.Abs(direction.x * (moveSpeed / 2)) / 2;
+                    //add in the y axis
+                    transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y + direction.y * (moveSpeed / 2) * Time.deltaTime);
+                    //no gravity for being on ladder
+                    rb.gravityScale = 0;
+                }
+                else
+                {
+                    //when the zombie comes off of the ladder set 
+                    //everything back to where it should be
+                    rb.gravityScale = 1;
+                    anim.SetLayerWeight(1, 0);
+                    //changes the frame rate at which the zombie animations are played 
+                    anim.speed = animationPlaySpeed;
+                }
+
             }
             else
             {
-                //when the zombie comes off of the ladder set 
-                //everything back to where it should be
-                rb.gravityScale = 1;
-                anim.SetLayerWeight(1, 0);
-                //changes the frame rate at which the zombie animations are played 
-                anim.speed = animationPlaySpeed;
-            }
+                //stop the zombie from playing the wrong animation when switching characters 
+                anim.SetFloat("speed", 0f);
 
+                //stops the animation speed playing when the ghost is selected and the zombie is on a ladder
+                if (anim.GetCurrentAnimatorStateInfo(1).IsName("Climbing"))
+                {
+                    anim.speed = 0;
+                }
+            }
         }
         else
         {
-            //stop the zombie from playing the wrong animation when switching characters 
-            anim.SetFloat("speed", 0f);
-
-            //stops the animation speed playing when the ghost is selected and the zombie is on a ladder
-            if (anim.GetCurrentAnimatorStateInfo(1).IsName("Climbing"))
+            if (active == true)
             {
-                anim.speed = 0;
+                //moves the zombie left and right 
+                movementLeftRightUpdate();
+
+                //zombie stomp ability
+                stompUpdate();
+
+                //zombie melee ability 
+                meleeUpdate();
+
+                //ladders
+                if (onLadder)
+                {
+                    //changes to the ladder weight
+                    anim.SetLayerWeight(1, 1);
+                    anim.speed = Mathf.Abs(direction.y * (moveSpeed / 2)) + Mathf.Abs(direction.x * (moveSpeed / 2)) / 2;
+                    //add in the y axis
+                    transform.position = new Vector2(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y + direction.y * (moveSpeed / 2) * Time.deltaTime);
+                    //no gravity for being on ladder
+                    rb.gravityScale = 0;
+                }
+                else
+                {
+                    //when the zombie comes off of the ladder set 
+                    //everything back to where it should be
+                    rb.gravityScale = 1;
+                    anim.SetLayerWeight(1, 0);
+                    //changes the frame rate at which the zombie animations are played 
+                    anim.speed = animationPlaySpeed;
+                }
+
+            }
+            else
+            {
+                //stop the zombie from playing the wrong animation when switching characters 
+                anim.SetFloat("speed", 0f);
+
+                //stops the animation speed playing when the ghost is selected and the zombie is on a ladder
+                if (anim.GetCurrentAnimatorStateInfo(1).IsName("Climbing"))
+                {
+                    anim.speed = 0;
+                }
             }
         }
 
